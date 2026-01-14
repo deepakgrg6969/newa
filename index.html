@@ -10,21 +10,24 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Allison&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaisei+HarunoUmi&family=M+PLUS+Rounded+1c&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+
     <!-- Font Awesome Free (latest) CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
     <header>
-        <img class="logo" src="./images/logo.png" alt="">
+        <img class="logo" src="./images/logo.JPG" alt="">
         <ul class="nav">
-            <li><a href="">home</a></li>
-            <li><a href="">menu</a></li>
-            <li><a href="">about</a></li>
-            <li><a href="">gallery</a></li>
-            <li><a href="">reservation</a></li>
-            <li><a href="">contact</a></li>
+            <li class="nav-list"><a href="">home</a></li>
+            <li class="nav-list"><a href="">menu</a></li>
+            <li class="nav-list"><a href="">about</a></li>
+            <li class="nav-list"><a href="">gallery</a></li>
+            <li class="nav-list"><a href="">reservation</a></li>
+            <li class="nav-list"><a href="">contact</a></li>
         </ul>
         <div class="user">
             <i class="fa-solid fa-circle-user fa-2xl"></i>
@@ -33,10 +36,126 @@
 
     </header>
 
-    <section class="main-contain">
-        
+    <section class="main-container">
+        <div class="title-container">
+            <h1>NEWA</h1>
+            <h2>仙台で本格ネパール料理</h2>
+            <p>ネパールの豊かな味わいと彩り豊かな料理を、日本でお楽しみください。</p>
+            <div class="buttons">
+                <button class="button-1">メニューを見る</button>
+                <button class="button-2">予約する</button>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="./images/thakaliset.png" alt="" class="home-image">
+        </div>
     </section>
 
+    <!-- loop animation -->
+    <section class="loop">
+        <div class="animation">
+            <img src="./images/side menu set/RI-momo.png" alt="">
+            <img src="./images/Curry set/RI-Chicken Curry.png" alt="">
+            <img src="./images/side menu set/RI-Chips Chilly.png" alt="">
+            <img src="./images/Drinks/RI-banana lassi.png" alt="">
+            <img src="./images/side menu set/Ri-Samosa.png" alt="">
+            <img src="./images/side menu set/RI-Papad.png" alt="">
+            <img src="./images/side menu set/Ri-Panipuri.png" alt="">
+        </div>
+        <div class="animation">
+            <img src="./images/side menu set/RI-momo.png" alt="">
+            <img src="./images/Curry set/RI-Chicken Curry.png" alt="">
+            <img src="./images/side menu set/RI-Chips Chilly.png" alt="">
+            <img src="./images/Drinks/RI-banana lassi.png" alt="">
+            <img src="./images/side menu set/Ri-Samosa.png" alt="">
+            <img src="./images/side menu set/RI-Papad.png" alt="">
+            <img src="./images/side menu set/Ri-Panipuri.png" alt="">
+        </div>
+
+    </section>
+
+    <!-- menu section -->
+    <section id="menu" class="menu-container">
+        <div id="title">
+            <h1>MENU</h1>
+            <h2>メニュー</h2>
+            <p>Special</p>
+        </div>
+        <div class="menu-poster">
+            <img src="./images/poster-1.png" alt="" class="poster-1">
+            <img src="./images/poster-1.png" alt="" class="poster-2">
+            <img src="./images/poster-1.png" alt="" class="poster-3">
+            <div class="circle"></div>
+        </div>
+        <button class="menu-button">もっと 見る</button>
+    </section>
+
+    <!-- About section -->
+
+    <section id="about" class="about-container">
+        <div class="about-01">
+            <img src="./images/mask.png" alt="" class="mask">
+            <div id="title" class="about-title">
+                <h1>AbOUT</h1>
+                <h2>レストランについて</h2>
+                <p>Restaurant</p>
+            </div>
+            <img src="./images/window.png" alt="" class="window">
+        </div>
+
+        <div class="about-wrapper">
+            <div class="about-02">
+                <div class="about-text">
+                    <div class="story">
+                        <h2>Our story</h2>
+                        <p>NEWAは、ネパールの本場の味を日本に届けるため、仙台の宮町にオープンしました。店内に入ると、友人や家族、食を楽しむすべての人が集まれる、温かく居心地の良い空間が広がります。日本語も話せるネパール人スタッフが、初めての方でも常連の方でも、心地よくお迎えします。
+                        </p>
+                    </div>
+                    <div class="philosophy">
+                        <h2>Our Philosophy</h2>
+                        <p>NEWAでは、ネパールの文化と温かさを、料理を通して伝えることを大切にしています。一皿一皿に心を込め、伝統的なレシピとヒマラヤの力強い味わいを大切にしています。誰もが心地よく過ごせる空間で、本格的な料理を楽しみ、友人や家族と食事を分かち合う喜びを感じていただけることを目指しています。
+                        </p>
+                    </div>
+                </div>
+                <img src="./images/restaurant-outer.png" alt="">
+            </div>
+            <div class="about-03">
+                <div class="cuisine">
+                    <div class="cuisine-inner">
+                        <h2>Our Cuisine</h2>
+                        <p>NEWAでは、新鮮な食材と伝統的なヒマラヤスパイスを使った、本格的なネパール料理をご提供しています。ご飯、豆料理、カレー、副菜が揃う満足感たっぷりの タカリカナ から、モモ
+                            や炒め物、スパイスの効いた肉料理まで、どの一皿もネパールの味わいを感じられます。ネパール産のビール、ラム、ウイスキーも揃い、ひと口ごとに本場の味をお楽しみいただけます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- feedback&review section -->
+
+    <section class="feedback" id="review">
+        <div id="title">
+            <h1>FEEDBACK</h1>
+            <h2>お客様の声</h2>
+            <p>From Our Customer</p>
+        </div>
+        <!-- <div class="review-box">
+        </div> -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">slide-1</div>
+                <div class="swiper-slide">slide-2</div>
+                <div class="swiper-slide">slide-3</div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </body>
 
 </html>
