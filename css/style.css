@@ -97,7 +97,7 @@ i:hover {
 }
 
 .main-container {
-    background-image: url(../images/Rectangle\ 143.png);
+    background-image: url(/images/homepage-images/Rectangle\ 143.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -298,12 +298,14 @@ button {
     font-size: 1.5rem;
     padding: 2rem;
     box-shadow: -5px 5px 5px rgb(235, 232, 232);
+    /* writing-mode: vertical-rl;
+    text-orientation: upright; */
 }
 .about-03{
     height: 600px;
     width: 998px;
     /* margin: 0 22.6rem; */
-    background: url(../images/restaurant-inner.png) center center/cover no-repeat;
+    background: url(/images/homepage-images/restaurant-inner.png) center center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -350,9 +352,31 @@ button {
     width: 100%;
     /* height: 62rem; */
     height: 100%;
-    background-color: burlywood;
+    /* background-color: burlywood; */
 }
 .swiper{
     width: 800px;
     height: 500px;
 }
+.swiper-button-prev{
+    width: 60px;
+    height: 60px;
+    transform: rotate(-180deg);
+    background-color: rgb(222, 222, 222);
+    border-radius: 50%;
+    color: black;
+}
+.swiper-button-next{
+    width: 60px;
+    height: 60px;
+    background-color: rgb(222, 222, 222);
+    border-radius: 50%;
+    color: black;
+}
+/* .swiper-button-prev::after{
+    font-size: 10px !important;
+} */
+.swiper-button-prev svg,.swiper-button-next svg {
+    width: 12px;
+    height: 12px;
+ }
