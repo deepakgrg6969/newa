@@ -67,7 +67,7 @@ header {
     text-transform: capitalize;
     cursor: pointer;
     position: relative;
-    transition: width 0.3s ease-in;
+      transition: width 0.3s ease-in;
 
 }
 
