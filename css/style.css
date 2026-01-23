@@ -361,7 +361,7 @@ button {
 .swiper-button-prev{
     width: 60px;
     height: 60px;
-    transform: rotate(-180deg);
+    /* transform: rotate(-180deg); */
     background-color: rgb(222, 222, 222);
     border-radius: 50%;
     color: black;
