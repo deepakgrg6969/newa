@@ -1,0 +1,23 @@
+footer {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    .footer-info {
+        display: flex;
+        justify-content: center;
+        // flex-wrap: wrap;
+        color: white;
+
+        .footer-info-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
