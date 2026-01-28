@@ -23,6 +23,12 @@ footer .footer-info .footer-info-box {
   text-align: center;
   gap: 10px;
 }
+footer .footer-info #f-box2 a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: blue;
+  margin-top: 10px;
+}
 footer .footer-nav ul {
   text-align: center;
   display: flex;
@@ -31,7 +37,6 @@ footer .footer-nav ul {
 }
 footer .copyright {
   color: white;
-  text-decoration: underline;
 }
 
 .rating {

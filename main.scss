@@ -24,6 +24,12 @@ footer {
             text-align: center;
             gap: 10px;
         }
+        #f-box2 a{
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            color: blue;
+            margin-top: 10px;
+        }
     }
 
     .footer-nav ul {
@@ -34,7 +40,6 @@ footer {
     }
     .copyright{
         color: white;
-        text-decoration: underline;
     }
 
 }
