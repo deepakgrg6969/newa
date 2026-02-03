@@ -1,3 +1,171 @@
+:root{
+    --primary-color: #87252D;
+    --secondary-color: #DE8928;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    background: "Jost", sans-serif, serif;
+    overflow-x: hidden;
+    /* position:relative */
+}
+
+
+header {
+    height: 10rem;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12rem;
+    border-bottom: 10px solid var(--secondary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+
+/* 
+    header {
+    position: fixed;       
+    top: 0;                
+    left: 0;              
+    z-index: 1000;         
+    */
+
+.logo {
+    height: 9rem;
+    width: 10.5rem;
+    object-fit: cover;
+}
+
+.nav {
+    display: flex;
+    gap: 5rem;
+}
+
+.nav-list a {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+    position: relative;
+      transition: width 0.3s ease-in;
+
+}
+
+.nav-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.6rem;
+    width: 0%;
+    height: 0.2rem;
+    background-color: white;
+}
+
+.nav-list a:hover::after,
+.nav-list a.active::after {
+    width: 100%;
+}
+
+.user {
+    display: flex;
+    gap: 3rem;
+    cursor: pointer;
+}
+
+i:hover {
+    scale: 1.2;
+}
+
+.main-container {
+    background-image: url(./images/homepage-images/homepage_wallpaper2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10rem 10rem 0 10rem;
+}
+
+.hanging_panas{
+    width: 128px;
+}
+
+.title-container {
+    color: white;
+
+
+}
+
+.title-container h1 {
+    font-size: 9rem;
+}
+
+.title-container h2 {
+    font-size: 4rem;
+}
+
+.title-container p {
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+
+button {
+    width: 15rem;
+    height: 4.5rem;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 20px;
+}
+.buttons{
+    display: flex;
+    gap: 25px;
+}
+#button-1{
+    background: var(--secondary-color);
+}
+#button-2{
+    background: var(--primary-color);
+}
+
+/* .button-2 {
+    margin: 0 2rem;
+} */
+
+.image-container img {
+    width: 500px;
+    border-radius: 50%;
+}
+
+
 footer {
     width: 100%;
     background-color: black;
@@ -44,18 +212,3 @@ footer {
 
 }
 
-.rating {
-    color: #fffb00;
-    font-size: 3rem;
-}
-
-.swiper-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background: #969595;
-    border-radius: 20px;
-    font-size: large;
-    color: white;
-}

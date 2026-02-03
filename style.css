@@ -1,3 +1,8 @@
+:root{
+    --primary-color: #87252D;
+    --secondary-color: #DE8928;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,129 +26,6 @@ body {
     background: "Jost", sans-serif, serif;
     overflow-x: hidden;
     /* position:relative */
-}
-
-
-header {
-    height: 10rem;
-    width: 100%;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 12rem;
-    border-bottom: 10px solid #DE8928;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-
-}
-
-/* 
-    header {
-    position: fixed;       
-    top: 0;                
-    left: 0;              
-    z-index: 1000;         
-    */
-
-.logo {
-    height: 9rem;
-    width: 10.5rem;
-    object-fit: cover;
-}
-
-.nav {
-    display: flex;
-    gap: 5rem;
-}
-
-.nav-list a {
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    cursor: pointer;
-    position: relative;
-      transition: width 0.3s ease-in;
-
-}
-
-.nav-list a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.6rem;
-    width: 0%;
-    height: 0.2rem;
-    background-color: white;
-}
-
-.nav-list a:hover::after,
-.nav-list a.active::after {
-    width: 100%;
-}
-
-.user {
-    display: flex;
-    gap: 3rem;
-    cursor: pointer;
-}
-
-i:hover {
-    scale: 1.2;
-}
-
-.main-container {
-    background-image: url(./images/homepage-images/Rectangle\ 143.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 88.8rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10rem 10rem 0 10rem;
-}
-
-.title-container {
-    color: white;
-
-
-}
-
-.title-container h1 {
-    font-size: 9rem;
-}
-
-.title-container h2 {
-    font-size: 4rem;
-}
-
-.title-container p {
-    font-size: 2rem;
-    padding: 2rem 0;
-}
-
-button {
-    width: 15rem;
-    height: 5rem;
-    background-color: #FF9B04;
-    color: white;
-    font-size: 1.6rem;
-}
-
-/* .button-2 {
-    margin: 0 2rem;
-} */
-
-.image-container img {
-    height: 557px;
-    width: 560px;
-    border-radius: 50%;
 }
 
 /* loop animation */
@@ -244,6 +126,7 @@ button {
 }
 .menu-button{
     transform: translateY(-60px);
+    background: var(--secondary-color);
 }
 
 /* About section */
@@ -307,6 +190,7 @@ button {
     /* margin: 0 22.6rem; */
     background: url(/images/homepage-images/restaurant-inner.png) center center/cover no-repeat;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -326,6 +210,9 @@ button {
     text-align: center;
     margin: 10px 0;
 }
+.illustrator img{
+    width: 300px;
+}
 .about-wrapper{
     width: 120rem;
     height: fit-content;
@@ -343,25 +230,44 @@ button {
     flex-direction: column;
     align-items: center;
 }
+.rating {
+    color: #fffb00;
+    font-size: 3rem;
+}
+
+.comments{
+    width: 40rem;
+}
+.bg{
+    width: 100%;
+    background: #000;
+}
 .swiper-wrapper {
     width: 100%;
     height: 100%;
+    background: var(--secondary-color);
 }
-.swiper-slide{
-    /* width: 120rem; */
-    width: 100%;
-    /* height: 62rem; */
-    height: 100%;
-    /* background-color: burlywood; */
+ .swiper-slide {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--primary-color);
+    border-radius: 20px;
+    font-size: large;
+    color: white;
 }
 .swiper{
     width: 800px;
     height: 500px;
+    background: #000;
 }
 .swiper-button-prev{
     width: 60px;
     height: 60px;
-    /* transform: rotate(-180deg); */
+    transform: rotate(-180deg);
     background-color: rgb(222, 222, 222);
     border-radius: 50%;
     color: black;
@@ -373,10 +279,25 @@ button {
     border-radius: 50%;
     color: black;
 }
-/* .swiper-button-prev::after{
-    font-size: 10px !important;
-} */
 .swiper-button-prev svg,.swiper-button-next svg {
     width: 12px;
     height: 12px;
  }
+
+.slider-illus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10rem;
+    align-items: center;
+}
+.round-momo{
+    opacity: 0.5;
+    width: 120px;
+
+}
+.flat-momo{
+    opacity: 0.5;
+    width: 110px;
+    transform: rotate(45deg);
+}
