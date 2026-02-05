@@ -98,69 +98,43 @@ i:hover {
   scale: 1.2;
 }
 
-.main-container {
-  background-image: url(./images/homepage-images/homepage_wallpaper2.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100rem;
+/* sns section */
+
+.contact-container{
   width: 100%;
+  height: 12rem;
+  background: var(--primary-color);
+  font-size: 1.8rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  padding: 10rem 10rem 0 10rem;
+  text-align: center;
 }
-
-.hanging_panas {
-  width: 128px;
+.contact-01 i{
+  color: rgb(9, 255, 9);
 }
-
-.title-container {
+.contact-01 a{
   color: white;
 }
-
-.title-container h1 {
-  font-size: 9rem;
+.contact-01 a span{
+  text-decoration: underline;
 }
-
-.title-container h2 {
-  font-size: 4rem;
-}
-
-.title-container p {
-  font-size: 2rem;
-  padding: 2rem 0;
-}
-
-button {
-  width: 15rem;
-  height: 4.5rem;
+.contact-02 {
   color: white;
-  font-size: 1.6rem;
-  border-radius: 20px;
+}
+.contact-02 p{
+  text-decoration: underline;
+  padding: 15px;
+  text-underline-offset: 8px;
+}
+.contact-03 {
+  color: white;
+}
+.contact-03 a{
+  color: white;
+  text-decoration: underline;
 }
 
-.buttons {
-  display: flex;
-  gap: 25px;
-}
-
-#button-1 {
-  background: var(--secondary-color);
-}
-
-#button-2 {
-  background: var(--primary-color);
-}
-
-/* .button-2 {
-    margin: 0 2rem;
-} */
-.image-container img {
-  width: 500px;
-  border-radius: 50%;
-}
 
 footer {
   width: 100%;
@@ -190,8 +164,9 @@ footer .footer-info .footer-info-box {
 footer .footer-info #f-box2 a {
   text-decoration: underline;
   text-underline-offset: 4px;
-  color: blue;
+  color: rgb(18, 76, 250);
   margin-top: 10px;
+  font-size: 18px;
 }
 footer .footer-nav ul {
   text-align: center;

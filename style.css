@@ -1,4 +1,4 @@
-:root{
+:root {
     --primary-color: #87252D;
     --secondary-color: #DE8928;
 }
@@ -25,38 +25,108 @@ body {
     min-height: 100vh;
     background: "Jost", sans-serif, serif;
     overflow-x: hidden;
-    /* position:relative */
+    position: relative
 }
+
+.main-container {
+    background-image: url(./images/homepage-images/wallpaper.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 95rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20rem 10rem 0 10rem;
+}
+
+
+.title-container {
+    color: white;
+}
+
+.title-container h1 {
+    font-size: 9rem;
+    color: var(--secondary-color);
+}
+
+.title-container h2 {
+    font-size: 4rem;
+    color: var(--secondary-color);
+}
+
+.title-container p {
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+
+button {
+    width: 15rem;
+    height: 4.5rem;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 25px;
+}
+
+#button-1,
+#button-2 {
+    background: var(--primary-color);
+}
+
+
+
+/* .button-2 {
+    margin: 0 2rem;
+} */
+.image-container img {
+    width: 500px;
+    border-radius: 50%;
+}
+
 
 /* loop animation */
 
 .loop {
-    height: 25rem;
+    height: 20rem;
     width: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-@keyframes loop-animation{
-    from{
+
+@keyframes loop-animation {
+    from {
         transform: translateX(0);
     }
-    to{
+
+    to {
         transform: translateX(-100%);
     }
 }
-.animation{
+
+.animation {
     animation: loop-animation 40s infinite linear 0.5s both;
     display: flex;
     gap: 100px;
+    width: max-content;
 }
+
 .loop .animation:nth-child(1) {
     margin-right: 100px;
 }
 
 .loop img {
-    width: 18em;
-    height: 14.5rem;
+    width: 17rem;
+    height: auto;
+    flex-shrink: 0;
 }
 
 /* menu section */
@@ -67,11 +137,13 @@ body {
     align-items: center;
     padding: 5rem;
 }
-#title{
+
+#title {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 #title h1 {
     font-family: "Titan One", sans-serif;
     font-weight: 300;
@@ -79,13 +151,15 @@ body {
     font-size: 15rem;
     opacity: 0.2;
 }
-#title h2{
+
+#title h2 {
     font-size: 5rem;
     position: absolute;
     padding: 6rem 0 0 0;
     text-decoration: solid;
     /* color: #f02400; */
 }
+
 #title p {
     font-family: "Allison", cursive;
     font-weight: 400;
@@ -93,6 +167,7 @@ body {
     font-size: 5rem;
     transform: translateY(-30px);
 }
+
 .menu-poster {
     display: flex;
     justify-content: space-between;
@@ -103,7 +178,8 @@ body {
     border-radius: 50%; */
     position: relative;
 }
-.circle{
+
+.circle {
     position: absolute;
     background: #603636;
     width: 1110px;
@@ -124,26 +200,30 @@ body {
     width: 51rem;
     height: 77rem;
 }
-.menu-button{
+
+.menu-button {
     transform: translateY(-60px);
     background: var(--secondary-color);
 }
 
 /* About section */
-.about-container{
+.about-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.mask{
+
+.mask {
     width: 16rem;
     height: 20rem;
 }
-.window{
+
+.window {
     width: 18rem;
     height: 22rem;
 }
-.about-01{
+
+.about-01 {
     height: 24rem;
     width: 100%;
     display: flex;
@@ -151,7 +231,8 @@ body {
     justify-content: space-between;
     padding: 5rem;
 }
-.about-02{
+
+.about-02 {
     height: 48.8rem;
     width: 100%;
     display: flex;
@@ -159,12 +240,14 @@ body {
     justify-content: center;
     gap: 10px;
 }
-.about-02 img{
+
+.about-02 img {
     width: 57rem;
     height: 40rem;
-    margin:35px 0 ;
+    margin: 35px 0;
 }
-.about-text{
+
+.about-text {
     width: 40.8rem;
     height: 48.8rem;
     display: flex;
@@ -172,7 +255,9 @@ body {
     justify-content: center;
     gap: 8px;
 }
-.story, .philosophy{
+
+.story,
+.philosophy {
     width: 40.8rem;
     height: 20rem;
     display: flex;
@@ -184,7 +269,8 @@ body {
     /* writing-mode: vertical-rl;
     text-orientation: upright; */
 }
-.about-03{
+
+.about-03 {
     height: 600px;
     width: 998px;
     /* margin: 0 22.6rem; */
@@ -194,7 +280,8 @@ body {
     justify-content: center;
     align-items: center;
 }
-.cuisine{
+
+.cuisine {
     width: 570px;
     height: 290px;
     font-size: 1.6rem;
@@ -206,14 +293,17 @@ body {
     padding: 2rem;
     border-radius: 0 40px 0 40px;
 }
+
 .cuisine-inner {
     text-align: center;
     margin: 10px 0;
 }
-.illustrator img{
+
+.illustrator img {
     width: 300px;
 }
-.about-wrapper{
+
+.about-wrapper {
     width: 120rem;
     height: fit-content;
     margin: 0 auto;
@@ -224,30 +314,37 @@ body {
 
 /* Feedback section */
 
-.feedback{
+.feedback {
     margin: 9rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .rating {
     color: #fffb00;
     font-size: 3rem;
 }
 
-.comments{
+.comments {
     width: 40rem;
 }
-.bg{
+
+.bg {
     width: 100%;
-    background: #000;
+    background: var(--secondary-color);
+    height: 70rem;
+    display: flex;
+    align-items: center;
 }
+
 .swiper-wrapper {
     width: 100%;
     height: 100%;
     background: var(--secondary-color);
 }
- .swiper-slide {
+
+.swiper-slide {
     width: 800px;
     height: 500px;
     display: flex;
@@ -259,45 +356,197 @@ body {
     font-size: large;
     color: white;
 }
-.swiper{
+
+.swiper {
     width: 800px;
     height: 500px;
-    background: #000;
 }
-.swiper-button-prev{
+
+.swiper-button-prev {
     width: 60px;
     height: 60px;
-    transform: rotate(-180deg);
+    transform: rotate(0deg);
     background-color: rgb(222, 222, 222);
     border-radius: 50%;
     color: black;
 }
-.swiper-button-next{
+
+.swiper-button-next {
     width: 60px;
     height: 60px;
     background-color: rgb(222, 222, 222);
     border-radius: 50%;
     color: black;
 }
-.swiper-button-prev svg,.swiper-button-next svg {
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
     width: 12px;
     height: 12px;
- }
+}
 
-.slider-illus{
+.slider-illus {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 10rem;
     align-items: center;
 }
-.round-momo{
+
+.round-momo {
     opacity: 0.5;
     width: 120px;
 
 }
-.flat-momo{
+
+.flat-momo {
     opacity: 0.5;
     width: 110px;
     transform: rotate(45deg);
+}
+
+/* services section */
+.service_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boyandgirl {
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+}
+
+.boyandgirl img {
+    width: 12rem;
+}
+
+.girl {
+    animation: moveFromLeft 3s forwards 0.5s ;
+}
+
+.boy {
+    animation: moveFromRight 3s forwards 0.5s ;
+}
+
+@keyframes moveFromLeft {
+    from {
+        transform: translateX(-300%);
+    }
+    to {
+        transform: translateX(590%);
+    }
+    
+}
+
+@keyframes moveFromRight {
+    from {
+        transform: translateX(1300%);
+    }
+    to {
+        transform: translateX(610%);
+    }
+    
+}
+
+
+
+.service-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/homepage-images/mount_everest.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 30px;
+    padding: 9rem;
+}
+
+.service_item {
+    width: 30rem;
+    height: 47rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.service_item img {
+    width: 21rem;
+    height: 12.5rem;
+}
+
+.service_item h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    text-align: center;
+    padding: 5px;
+}
+
+.delivery_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.service-text {
+    width: 28rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+}
+
+.service-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28rem;
+    height: 10rem;
+
+}
+
+.service-item-02 img {
+    width: 9rem;
+}
+
+.lunch-boxes p {
+    background: #000;
+}
+
+.best-value img {
+    width: 8rem;
+    height: auto;
+}
+
+.plate {
+    width: 8rem;
+}
+
+.service-button {
+    width: 160px;
+    height: 45px;
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.service_item p {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.service_item .delivery_logo img {
+    max-width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
 }
