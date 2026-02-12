@@ -1,6 +1,8 @@
 :root {
     --primary-color: #87252D;
     --secondary-color: #DE8928;
+    --background-color: #F9F3E7;
+    --title-color: #E2C6B6;
 }
 
 * {
@@ -23,9 +25,10 @@ a {
 
 body {
     min-height: 100vh;
-    background: "Jost", sans-serif, serif;
+    font-family: "Noto Serif JP", sans-serif, serif;
     overflow-x: hidden;
-    position: relative
+    position: relative;
+    background-color: var(--background-color);
 }
 
 .main-container {
@@ -33,13 +36,14 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 95rem;
+    min-height: 85rem;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    padding: 20rem 10rem 0 10rem;
+    padding: 50px;
+    margin-top: 40px;
 }
 
 
@@ -48,7 +52,9 @@ body {
 }
 
 .title-container h1 {
-    font-size: 9rem;
+    font-family: "Noto Sans JP";
+    font-size: 8rem;
+    font-weight: 900;
     color: var(--secondary-color);
 }
 
@@ -148,14 +154,15 @@ button {
     font-family: "Titan One", sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 15rem;
-    opacity: 0.2;
+    font-size: 12rem;
+    color: var(--title-color);
+    /* opacity: 0.2; */
 }
 
 #title h2 {
-    font-size: 5rem;
+    font-size: 3.6rem;
     position: absolute;
-    padding: 6rem 0 0 0;
+    padding: 5rem 0 0 0;
     text-decoration: solid;
     /* color: #f02400; */
 }
@@ -166,6 +173,7 @@ button {
     font-style: normal;
     font-size: 5rem;
     transform: translateY(-30px);
+    padding: 25px;
 }
 
 .menu-poster {
@@ -233,42 +241,52 @@ button {
 }
 
 .about-02 {
-    height: 48.8rem;
+    height: 45.5rem;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin: 25px 0;
 }
 
 .about-02 img {
-    width: 57rem;
-    height: 40rem;
-    margin: 35px 0;
+    width: 610px;
+    height: 445px;
 }
 
 .about-text {
-    width: 40.8rem;
+    width: 37.5rem;
     height: 48.8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 8px;
+    gap: 5px;
 }
 
 .story,
 .philosophy {
-    width: 40.8rem;
-    height: 20rem;
+    width: 36rem;
+    height: 22rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    font-size: 1.5rem;
-    padding: 2rem;
-    box-shadow: -5px 5px 5px rgb(235, 232, 232);
-    /* writing-mode: vertical-rl;
-    text-orientation: upright; */
+    justify-content: flex-start;
 }
+
+.story h2,
+.philosophy h2 {
+    font-size: 2.4rem;
+    color: var(--secondary-color);
+    padding-bottom: 15px;
+}
+
+.story p,
+.philosophy p {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
 
 .about-03 {
     height: 600px;
@@ -279,24 +297,37 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-.cuisine {
-    width: 570px;
-    height: 290px;
-    font-size: 1.6rem;
-    color: white;
-    background: rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    border-radius: 0 40px 0 40px;
+
+    .cuisine {
+        width: 570px;
+        height: 290px;
+        font-size: 1.6rem;
+        color: white;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 0 40px 0 40px;
+    }
+
 }
 
 .cuisine-inner {
     text-align: center;
     margin: 10px 0;
+
+    h2 {
+        color: var(--secondary-color);
+        padding-bottom: 15px;
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+
 }
 
 .illustrator img {
@@ -332,8 +363,8 @@ button {
 
 .bg {
     width: 100%;
-    background: var(--secondary-color);
-    height: 70rem;
+    /* background: var(--secondary-color); */
+    height: 62rem;
     display: flex;
     align-items: center;
 }
@@ -345,8 +376,8 @@ button {
 }
 
 .swiper-slide {
-    width: 800px;
-    height: 500px;
+    width: 980px;
+    height: 620px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -358,8 +389,8 @@ button {
 }
 
 .swiper {
-    width: 800px;
-    height: 500px;
+    width: 980px;
+    height: 620px;
 }
 
 .swiper-button-prev {
@@ -423,31 +454,33 @@ button {
 }
 
 .girl {
-    animation: moveFromLeft 3s forwards 0.5s ;
+    animation: moveFromLeft 3s forwards 0.5s;
 }
 
 .boy {
-    animation: moveFromRight 3s forwards 0.5s ;
+    animation: moveFromRight 3s forwards 0.5s;
 }
 
 @keyframes moveFromLeft {
     from {
         transform: translateX(-300%);
     }
+
     to {
         transform: translateX(590%);
     }
-    
+
 }
 
 @keyframes moveFromRight {
     from {
         transform: translateX(1300%);
     }
+
     to {
         transform: translateX(610%);
     }
-    
+
 }
 
 
