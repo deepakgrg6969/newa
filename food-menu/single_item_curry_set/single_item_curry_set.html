@@ -7,6 +7,8 @@
     <title>Newa Restaurant/food-menu/single_item_curry</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Allison&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaisei+HarunoUmi&family=M+PLUS+Rounded+1c&display=swap"
         rel="stylesheet">
@@ -21,22 +23,305 @@
 
 <body>
     <header>
-        <img class="logo" src="../images/homepage-images/logo.JPG" alt="">
+        <img class="logo" src="/images/homepage-images/logo.JPG" alt="">
         <ul id="navigation" class="nav">
-            <li class="nav-list"><a href="../index.html">home</a></li>
-            <li class="nav-list"><a href="#menu">menu</a></li>
-            <li class="nav-list"><a href="#about">about</a></li>
-            <li class="nav-list"><a href="#serivce">services</a></li>
-            <li class="nav-list"><a href="../gallery/gallery.html">gallery</a></li>
-            <li class="nav-list"><a href="./reservation/reservation.html">reservation</a></li>
-            <li class="nav-list"><a href="../access/access.html">access</a></li>
+            <li class="nav-list"><a href="/index.html">home</a></li>
+            <li class="nav-list"><a href="/index.html#menu">menu</a></li>
+            <li class="nav-list"><a href="/index.html#about">about</a></li>
+            <li class="nav-list"><a href="/index.html#service">services</a></li>
+            <li class="nav-list"><a href="/gallery/gallery.html">gallery</a></li>
+            <li class="nav-list"><a href="/reservation/reservation.html">reservation</a></li>
+            <li class="nav-list"><a href="/access/access.html">access</a></li>
         </ul>
         <div class="user">
             <i class="fa-solid fa-circle-user fa-2xl"></i>
             <i class="fa-solid fa-cart-arrow-down fa-2xl"></i>
         </div>
-
     </header>
+
+    <div class="submenu">
+        <a href="/food-menu/recommend/recommend.html" onclick="showSection('recommend', this)">Recommend</a>
+        <a href="/food-menu/newa_set_menu/newa_set_menu.html" onclick="showSection('newa-set', this)">Newa Set Menu</a>
+        <a href="/food-menu/lunch&dinner_set/lunch&dinner_set.html" onclick="showSection('lunch', this)">Lunch</a>
+        <a href="/food-menu/single_item_curry_set/single_item_curry_set.html" onclick="showSection('curry', this)"
+            style="color:#eeff01;">Curry Set</a>
+        <a href="/food-menu/side_menu/side_menu.html" onclick="showSection('slide', this)">Side Menu</a>
+        <a href="/food-menu/salad/salad.html" onclick="showSection('salad', this)">Salad</a>
+        <a href="/food-menu/Drinks/drinks.html" onclick="showSection('drinks', this)">Drinks</a>
+    </div>
+
+    <section class="main-box">
+        <div id="title">
+            <h1>SINGLE ITEM CURRY </h1>
+            <h2>単品カレーセット</h2>
+        </div>
+
+        <div class="message" style="font-size: 16px; padding: 0 0 40px 0;">
+            <h2>お好みのカレーを一品選んで楽しめる、シンプルで満足感のあるセットです</h2>
+        </div>
+    </section>
+
+        <!-- SET DRINKS CARD -->
+    <section class="main-container">
+        <div class="set-card">
+            <div class="set-card-tabs">
+                <p class="set-tab" data-set="nan">SINGLE ITEM NAAN (単品ナン)</p>
+            </div>
+
+            <div class="set-panel active" id="panel-drinks">
+                <div class="set-card-body2">
+                    <div class="set-col">
+                        <ul>
+                            <li>Naan (ナン)</li>
+                            <li>Cheese Naan (チーズナン)</li>
+                            <li>Sesame Naan (ごまナン)</li>
+                            <li>Garlic Naan (ガーリックナン)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="set-panel" id="panel-nan">
+                <div class="set-card-body">
+                    <div class="set-col">
+                        <ul>
+                            <li>(ナンは１枚までおかわり可能です)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spice-label">辛さを選んで下さい</div>
+            <div class="spice-dots" id="spice-selector">
+                <span class="spice-dot active" data-level="1" title="辛さ 1"></span>
+                <span class="spice-dot active" data-level="2" title="辛さ 2"></span>
+                <span class="spice-dot active" data-level="3" title="辛さ 3"></span>
+                <span class="spice-dot active" data-level="4" title="辛さ 4"></span>
+            </div>
+            <div class="spice-text" id="spice-text">辛さ: 4（激辛）</div>
+        </div>
+    </section>
+
+
+    <!-- ROW 1: 5 curries -->
+    <div class="row">
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Vegetable Curry.png" alt="">
+            </div>
+            <div class="curry-card__name">VEGETABLE（ベジタベル）</div>
+            <div class="curry-card__name-jp">野菜</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">550円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Seafood Curry.png" alt="">
+            </div>
+            <div class="curry-card__name">SEAFOOD</div>
+            <div class="curry-card__name-jp">（海の辛）</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">840円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Chicken Butter Curry.png" alt="">
+            </div>
+            <div class="curry-card__name">CHICKEN BUTTER</div>
+            <div class="curry-card__name-jp">（チキンバター）</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">700円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Pork Butter Curry.png" alt="">
+            </div>
+            <div class="curry-card__name">PORK BUTTER</div>
+            <div class="curry-card__name-jp">（ポークバター）</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">720円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Kima Curry.png" alt="">
+            </div>
+            <div class="curry-card__name">KEEMA</div>
+            <div class="curry-card__name-jp">（キーマ）</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">640円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Dal Curry.png" alt="">
+            </div>
+            <div class="curry-card__name">DAL</div>
+            <div class="curry-card__name-jp">ダール（豆）</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">550円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Chicken Masala.png" alt="">
+            </div>
+            <div class="curry-card__name">CHICKEN MASALA</div>
+            <div class="curry-card__name-jp">（チキンマサラ）</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">750円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Mutton Masala.png" alt="">
+            </div>
+            <div class="curry-card__name">MUTTON MASALA</div>
+            <div class="curry-card__name-jp">（マトンマサラ）</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">800円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Chicken Curry.png" alt="">
+            </div>
+            <div class="curry-card__name">CHICKEN</div>
+            <div class="curry-card__name-jp">（チキン）</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">600円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Mutton Curry.png" alt="">
+            </div>
+            <div class="curry-card__name">MUTTON</div>
+            <div class="curry-card__name-jp">（マトン）</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">650円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Pork Curry.png" alt="">
+            </div>
+            <div class="curry-card__name">PORK</div>
+            <div class="curry-card__name-jp">（ポーク）</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">650円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Saag Curry.png" alt="">
+            </div>
+            <div class="curry-card__name">SAAG CHICKEN</div>
+            <div class="curry-card__name-jp">（サグチキン）</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">650円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Saag Curry.png" alt="">
+            </div>
+            <div class="curry-card__name">SAAG PORK</div>
+            <div class="curry-card__name-jp">（サグポーク）</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">700円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+        <div class="curry-card">
+            <div class="curry-card__img">
+                <img src="/images/Curry set/RI-Saag Curry.png" alt="">
+            </div>
+            <div class="curry-card__name">SAAG MUTTON</div>
+            <div class="curry-card__name-jp">（サグマトン）</div>
+            <div class="curry-card__bottom">
+                <span class="curry-card__price">700円</span>
+                <button class="cart-btn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                    </svg></button>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="footer-note">*サグ＝ほれんそう草</p>
+
+
 
     <!-- sns section -->
     <div class="contact-container">
@@ -61,7 +346,7 @@
 
     <footer>
         <div class="footer logo">
-            <img class="logo" src="../images/homepage-images/logo.JPG" alt="">
+            <img class="logo" src="/images/homepage-images/logo.JPG" alt="">
         </div>
         <div class="footer-info">
             <div id="f-box1" class="footer-info-box">

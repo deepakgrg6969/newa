@@ -25,9 +25,11 @@ body {
   min-height: 100vh;
   background: "Jost", sans-serif, serif;
   overflow-x: hidden;
-  /* position:relative */
 }
 
+/* ========================
+   HEADER
+======================== */
 header {
   height: 10rem;
   width: 100%;
@@ -44,20 +46,15 @@ header {
   z-index: 1000;
 }
 
-/* 
-    header {
-    position: fixed;       
-    top: 0;                
-    left: 0;              
-    z-index: 1000;         
-    */
 .logo {
   height: 9rem;
   width: 10.5rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
+/* ========================
+   NAV (Desktop)
+======================== */
 .nav {
   display: flex;
   gap: 5rem;
@@ -70,7 +67,7 @@ header {
   text-transform: capitalize;
   cursor: pointer;
   position: relative;
-  transition: width 0.3s ease-in;
+  transition: color 0.3s ease;
 }
 
 .nav-list a::after {
@@ -81,6 +78,7 @@ header {
   width: 0%;
   height: 0.2rem;
   background-color: white;
+  transition: width 0.3s ease-in;
 }
 
 .nav-list a:hover::after,
@@ -88,6 +86,97 @@ header {
   width: 100%;
 }
 
+/* ========================
+   HAMBURGER BUTTON
+======================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 2.8rem;
+  height: 0.3rem;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(0.9rem) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-0.9rem) rotate(-45deg);
+}
+
+/* ========================
+   MOBILE NAV DRAWER
+======================== */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 10rem; /* header height */
+  left: 0;
+  right: 0;
+  background-color: #111;
+  border-top: 3px solid var(--secondary-color);
+  z-index: 999;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.mobile-nav.open {
+  display: flex;
+  max-height: 50rem;
+  opacity: 1;
+}
+
+.mobile-nav .nav-list {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-nav .nav-list a {
+  display: block;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 1.6rem 2.4rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mobile-nav .nav-list a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--secondary-color);
+}
+
+.mobile-nav .nav-list:last-child {
+  border-bottom: none;
+}
+
+/* ========================
+   USER ICONS
+======================== */
 .user {
   display: flex;
   gap: 3rem;
@@ -98,9 +187,10 @@ i:hover {
   scale: 1.2;
 }
 
-/* sns section */
-
-.contact-container{
+/* ========================
+   CONTACT STRIP
+======================== */
+.contact-container {
   width: 100%;
   height: 12rem;
   background: var(--primary-color);
@@ -110,32 +200,41 @@ i:hover {
   align-items: center;
   text-align: center;
 }
-.contact-01 i{
+
+.contact-01 i {
   color: rgb(9, 255, 9);
 }
-.contact-01 a{
+
+.contact-01 a {
   color: white;
 }
-.contact-01 a span{
+
+.contact-01 a span {
   text-decoration: underline;
 }
+
 .contact-02 {
   color: white;
 }
-.contact-02 p{
+
+.contact-02 p {
   text-decoration: underline;
   padding: 15px;
   text-underline-offset: 8px;
 }
+
 .contact-03 {
   color: white;
 }
-.contact-03 a{
+
+.contact-03 a {
   color: white;
   text-decoration: underline;
 }
 
-
+/* ========================
+   FOOTER
+======================== */
 footer {
   width: 100%;
   background-color: black;
@@ -147,12 +246,14 @@ footer {
   font-size: 1.5rem;
   gap: 3rem;
 }
+
 footer .footer-info {
   display: flex;
   justify-content: space-around;
   color: white;
   text-align: center;
 }
+
 footer .footer-info .footer-info-box {
   width: 350px;
   display: flex;
@@ -161,6 +262,7 @@ footer .footer-info .footer-info-box {
   text-align: center;
   gap: 10px;
 }
+
 footer .footer-info #f-box2 a {
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -168,12 +270,149 @@ footer .footer-info #f-box2 a {
   margin-top: 10px;
   font-size: 18px;
 }
+
 footer .footer-nav ul {
   text-align: center;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
 }
+
 footer .copyright {
   color: white;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* ========================
+   SUBMENU
+======================== */
+.submenu {
+  background: #3a3a3a;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  padding: 100px 0 0;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.submenu a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 14px 50px;
+  display: block;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.submenu a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.submenu a.active {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* ========================
+   RESPONSIVE — Tablet (≤1024px)
+======================== */
+@media (max-width: 1024px) {
+  header {
+    padding: 0 4rem;
+  }
+
+  .nav {
+    gap: 2.5rem;
+  }
+
+  .nav-list a {
+    font-size: 1.5rem;
+  }
+}
+
+/* ========================
+   RESPONSIVE — Mobile (≤768px)
+======================== */
+@media (max-width: 768px) {
+  header {
+    padding: 0 2rem;
+    height: 9rem;
+  }
+
+  /* Hide desktop nav */
+  header > ul.nav {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Adjust mobile nav top to match header height */
+  .mobile-nav {
+    top: 9rem;
+  }
+
+  /* User icons — keep visible but smaller */
+  .user {
+    gap: 1.5rem;
+  }
+
+  .user i {
+    font-size: 2rem !important;
+  }
+
+  /* ── Contact strip ── */
+  .contact-container {
+    flex-direction: column;
+    height: auto;
+    gap: 1.6rem;
+    padding: 2.4rem 2rem;
+    font-size: 1.5rem;
+  }
+
+  /* ── Footer ── */
+  footer .footer-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  footer .footer-info .footer-info-box {
+    width: 100%;
+    max-width: 34rem;
+  }
+
+  footer .footer-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+}
+
+/* ========================
+   RESPONSIVE — Small Mobile (≤480px)
+======================== */
+@media (max-width: 480px) {
+  header {
+    padding: 0 1.6rem;
+  }
+
+  .logo {
+    height: 7rem;
+    width: 8.5rem;
+  }
+
+  .contact-container {
+    font-size: 1.3rem;
+  }
+
+  footer {
+    font-size: 1.3rem;
+  }
+}

@@ -7,6 +7,8 @@
     <title>Newa Restaurant/food-menu/recommend</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Allison&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaisei+HarunoUmi&family=M+PLUS+Rounded+1c&display=swap"
         rel="stylesheet">
@@ -21,22 +23,275 @@
 
 <body>
     <header>
-        <img class="logo" src="../images/homepage-images/logo.JPG" alt="">
+        <img class="logo" src="/images/homepage-images/logo.JPG" alt="">
         <ul id="navigation" class="nav">
-            <li class="nav-list"><a href="../index.html">home</a></li>
-            <li class="nav-list"><a href="#menu">menu</a></li>
-            <li class="nav-list"><a href="#about">about</a></li>
-            <li class="nav-list"><a href="#serivce">services</a></li>
-            <li class="nav-list"><a href="../gallery/gallery.html">gallery</a></li>
-            <li class="nav-list"><a href="./reservation/reservation.html">reservation</a></li>
-            <li class="nav-list"><a href="../access/access.html">access</a></li>
+            <li class="nav-list"><a href="/index.html">home</a></li>
+            <li class="nav-list"><a href="/index.html#menu">menu</a></li>
+            <li class="nav-list"><a href="/index.html#about">about</a></li>
+            <li class="nav-list"><a href="/index.html#service">services</a></li>
+            <li class="nav-list"><a href="/gallery/gallery.html">gallery</a></li>
+            <li class="nav-list"><a href="/reservation/reservation.html">reservation</a></li>
+            <li class="nav-list"><a href="/access/access.html">access</a></li>
         </ul>
         <div class="user">
             <i class="fa-solid fa-circle-user fa-2xl"></i>
             <i class="fa-solid fa-cart-arrow-down fa-2xl"></i>
         </div>
-
     </header>
+
+    <div class="submenu">
+        <a href="/food-menu/recommend/recommend.html" onclick="showSection('recommend', this)"
+            style="color:#eeff01;">Recommend</a>
+        <a href="/food-menu/newa_set_menu/newa_set_menu.html" onclick="showSection('newa-set', this)">Newa Set Menu</a>
+        <a href="/food-menu/lunch&dinner_set/lunch&dinner_set.html" onclick="showSection('lunch', this)">Lunch</a>
+        <a href="/food-menu/single_item_curry_set/single_item_curry_set.html" onclick="showSection('curry', this)">Curry
+            Set</a>
+        <a href="/food-menu/side_menu/side_menu.html" onclick="showSection('slide', this)">Side Menu</a>
+        <a href="/food-menu/salad/salad.html" onclick="showSection('salad', this)">Salad</a>
+        <a href="/food-menu/Drinks/drinks.html" onclick="showSection('drinks', this)">Drinks</a>
+    </div>
+
+    <!-- title section -->
+    <section class="main-box">
+        <div id="title">
+            <h1>RECOMMEND</h1>
+            <h2>オススメ</h2>
+        </div>
+
+        <div class="message" style="font-size: 16px; padding: 0 0 40px 0;">
+            <h2>日本にいながら本場ネパールの味と温かい雰囲気を感じていただけます</h2>
+        </div>
+    </section>
+
+    <!-- SET DRINKS CARD -->
+    <section class="main-container">
+        <div class="set-card">
+            <div class="set-card-tabs">
+                <p class="set-tab" data-set="drinks">SET DRINKS（セットドリンク）</p>
+                <p class="set-tab" data-set="nan">ナンに味を付けられます（+250円）</p>
+            </div>
+
+            <div class="set-panel active" id="panel-drinks">
+                <div class="set-card-body">
+                    <div class="set-col">
+                        <ul>
+                            <li>Plain lassi（プレーンラッシー）</li>
+                            <li>Orange juice（オレンジジュース）</li>
+                            <li>Ginger Ale（ジンジャーエール）</li>
+                            <li>Oolong Tea（ウーロン茶）</li>
+                            <li>Cocacola（コーラ）</li>
+                        </ul>
+                    </div>
+                    <div class="set-col">
+                        <ul>
+                            <li>チーズ</li>
+                            <li>ごま</li>
+                            <li>ガーリック</li>
+                            <li>ココナッツ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="set-panel" id="panel-nan">
+                <div class="set-card-body">
+                    <div class="set-col">
+                        <ul>
+                            <li>各 +250円</li>
+                            <li>注文時にお申し付けください</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spice-label">辛さを選んで下さい</div>
+            <div class="spice-dots" id="spice-selector">
+                <span class="spice-dot active" data-level="1" title="辛さ 1"></span>
+                <span class="spice-dot active" data-level="2" title="辛さ 2"></span>
+                <span class="spice-dot active" data-level="3" title="辛さ 3"></span>
+                <span class="spice-dot active" data-level="4" title="辛さ 4"></span>
+            </div>
+            <div class="spice-text" id="spice-text">辛さ: 4（激辛）</div>
+        </div>
+
+        <!-- Cards -->
+        <div class="cards">
+
+            <!-- MO:MO -->
+            <div class="card">
+                <div class="card__img">
+                    <img src="/images/side menu set/RI-momo.png" alt="">
+                </div>
+                <div class="card__body">
+                    <div class="card__header">
+                        <span class="card__title">MO:MO（モモ）</span>
+                        <span class="card__badge">（7個）</span>
+                    </div>
+                    <div class="card__row"><span class="card__item">Steam Mo:Mo</span><span
+                            class="card__item-price">550円</span></div>
+                    <div class="card__row"><span class="card__item">Soup Mo:Mo</span><span
+                            class="card__item-price">600円</span></div>
+                    <div class="card__row"><span class="card__item">Mo:Mo Chilly</span><span
+                            class="card__item-price">680円</span></div>
+                    <div class="card__row"><span class="card__item">Mo:Mo Fry</span><span
+                            class="card__item-price">650円</span></div>
+                    <div class="card__row"><span class="card__item">Mo:Mo Grilled</span><span
+                            class="card__item-price">600円</span></div>
+                    <div class="card__footer"><button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button></div>
+                </div>
+            </div>
+
+            <!-- CHAUMIN -->
+            <div class="card">
+                <div class="card__img">
+                    <img src="/images/side menu set/RI-Chowmin.png" alt="">
+                </div>
+                <div class="card__body">
+                    <div class="card__header">
+                        <span class="card__title">CHAUMIN（チョーミン）</span>
+                    </div>
+                    <div class="card__row"><span class="card__item">Steam Mo:Mo</span><span
+                            class="card__item-price">550円</span></div>
+                    <div class="card__row"><span class="card__item">Soup Mo:Mo</span><span
+                            class="card__item-price">600円</span></div>
+                    <div class="card__row"><span class="card__item">Mo:Mo Chilly</span><span
+                            class="card__item-price">680円</span></div>
+                    <div class="card__row"><span class="card__item">Mo:Mo Fry</span><span
+                            class="card__item-price">650円</span></div>
+                    <div class="card__row"><span class="card__item">Mo:Mo Grilled</span><span
+                            class="card__item-price">600円</span></div>
+                    <div class="card__footer"><button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button></div>
+                </div>
+            </div>
+
+            <!-- THAKALI KHANA -->
+            <div class="card">
+                <div class="card__img">
+                    <img src="/images/side menu set/RI-Thakali khana.png" alt="">
+                </div>
+                <div class="card__body">
+                    <div class="card__header">
+                        <span class="card__title">THAKALI KHANA<br>（タカリ・カナ）</span>
+                        <span class="card__price-large">¥1350</span>
+                    </div>
+                    <p class="card__desc">
+                        THAKALI
+                        KHANA（タカリ・カナ）は、ネパールのタカリ族の伝統的な定食料理です。ご飯、ダル（豆スープ）、季節の野菜、アチャール（漬物）、カレーがセットになった、栄養バランスの良い料理です。
+                    </p>
+                    <div class="card__footer"><button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button></div>
+                </div>
+            </div>
+
+            <!-- SPECIAL SET -->
+            <div class="card">
+                <div class="card__img">
+                    <img src="/images/Naan set/RI-Special Set Lunch.png" alt="">
+                </div>
+                <div class="card__body">
+                    <div class="card__header">
+                        <span class="card__title">SPECIAL SET</span>
+                        <span class="card__price-large">¥1050</span>
+                    </div>
+                    <div class="card__set-grid">
+                        <div class="card__set-left">
+                            Chicken curry（チキンカレー）<br>
+                            Turmeric Rice（ターメリックライス）<br>
+                            Chicken Tika（チキンティッカ）<br>
+                            Salad（サラダ）
+                        </div>
+                        <div class="card__set-right">
+                            追加物<br>
+                            Drinks（飲み物）<br><br>
+                            <span class="note">ナンは1枚までおかわり可能です。</span>
+                        </div>
+                    </div>
+                    <div class="card__footer"><button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button></div>
+                </div>
+            </div>
+
+            <!-- 2CURRY SET -->
+            <div class="card">
+                <div class="card__img">
+                    <img src="/images/Naan set/RI-2Curry Set.png" alt="">
+                </div>
+                <div class="card__body">
+                    <div class="card__header">
+                        <span class="card__title">2CURRY SET</span>
+                        <span class="card__price-large">¥1200</span>
+                    </div>
+                    <div class="card__set-grid">
+                        <div class="card__set-left">
+                            カレーをこの中から2種類選べます。<br>
+                            ・Chicken curry（チキンカレー）<br>
+                            ・Mutton curry（マトンカレー）<br>
+                            ・Vegetable curry（野菜カレー）<br>
+                            ・Keema curry（キーマカレー）<br>
+                            ・Saag Chicken（サグチキン）<br>
+                            ・Saag Mutton（サグマトン）
+                        </div>
+                        <div class="card__set-right">
+                            追加物<br>
+                            Drinks（飲み物）<br>
+                            Salad（サラダ）<br><br>
+                            <span class="note">ナンは1枚までおかわり可能です。</span>
+                        </div>
+                    </div>
+                    <div class="card__footer"><button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button></div>
+                </div>
+            </div>
+
+            <!-- CHEESE NAN SET -->
+            <div class="card">
+                <div class="card__img">
+                    <img src="/images/Naan set/RI-Cheese Naan Set.png" alt="">
+                </div>
+                <div class="card__body">
+                    <div class="card__header">
+                        <span class="card__title">CHEESE NAN SET</span>
+                        <span class="card__price-large">¥1080</span>
+                    </div>
+                    <div class="card__set-grid">
+                        <div class="card__set-left">
+                            カレーをこの中から2種類選べます。<br>
+                            ・Chicken curry（チキンカレー）<br>
+                            ・Mutton curry（マトンカレー）<br>
+                            ・Vegetable curry（野菜カレー）<br>
+                            ・Keema curry（キーマカレー）<br>
+                            ・Saag Chicken（サグチキン）<br>
+                            ・Saag Mutton（サグマトン）<br>
+                            ・Saag Pork（サグポーク）
+                        </div>
+                        <div class="card__set-right">
+                            追加物<br>
+                            Drinks（飲み物）<br>
+                            Salad（サラダ）<br><br>
+                            <span class="note">ナンは1枚までおかわり可能です。</span>
+                        </div>
+                    </div>
+                    <div class="card__footer"><button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button></div>
+                </div>
+            </div>
+
+        </div><!-- /cards -->
+    </section>
 
     <!-- sns section -->
     <div class="contact-container">
@@ -57,11 +312,12 @@
             <a href="">newarestaurant123@gmail.com</a>
         </div>
     </div>
+    
 
 
     <footer>
         <div class="footer logo">
-            <img class="logo" src="../images/homepage-images/logo.JPG" alt="">
+            <img class="logo" src="/images/homepage-images/logo.JPG" alt="">
         </div>
         <div class="footer-info">
             <div id="f-box1" class="footer-info-box">

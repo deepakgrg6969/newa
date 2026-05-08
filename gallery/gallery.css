@@ -1,0 +1,152 @@
+:root {
+    --primary-color: #87252D;
+    --secondary-color: #DE8928;
+    --background-color: #F9F3E7;
+    --title-color: #E2C6B6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Noto Serif JP", sans-serif, serif;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--background-color);
+}
+
+.main-box{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:12rem;
+}
+
+#title h1 {
+    font-family: "Titan One", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12rem;
+    color: var(--title-color);
+    /* opacity: 0.2; */
+}
+
+#title h2 {
+    font-size: 3.6rem;
+    position: absolute;
+    padding: 5rem 0 0 0;
+    text-decoration: solid;
+    /* color: #f02400; */
+}
+
+#title p {
+    font-family: "Allison", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    transform: translateY(-30px);
+    padding: 25px;
+}
+
+/* ── Gallery Grid ── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.gallery-item {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  background: #ddd;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ── Pagination ── */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 0 50px;
+}
+
+.page-btn {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid #c2b09a;
+  background: transparent;
+  color: #2a1f14;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.page-btn:hover {
+  background: #c8a97e;
+  color: white;
+  border-color: #c8a97e;
+}
+
+.page-btn.active {
+  background: #2a1f14;
+  color: white;
+  border-color: #2a1f14;
+}
+@media (max-width: 600px) {
+  .title-bg {
+    font-size: 60px;
+  }
+
+  .title-jp {
+    font-size: 18px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 16px;
+  }
+}
+

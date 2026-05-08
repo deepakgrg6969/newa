@@ -1,0 +1,307 @@
+:root {
+    --primary-color: #87252D;
+    --secondary-color: #DE8928;
+    --background-color: #F9F3E7;
+    --title-color: #E2C6B6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Noto Serif JP", sans-serif, serif;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--background-color);
+}
+
+.main-box{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:15rem;
+}
+
+#title h1 {
+    font-family: "Titan One", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12rem;
+    color: var(--title-color);
+    /* opacity: 0.2; */
+}
+
+#title h2 {
+    font-size: 3.6rem;
+    position: absolute;
+    padding: 5rem 0 0 0;
+    text-decoration: solid;
+    /* color: #f02400; */
+}
+
+#title p {
+    font-family: "Allison", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    transform: translateY(-30px);
+    padding: 25px;
+}
+
+/* ══ SET CARD ══ */
+.set-card {
+    background: var(--secondary-color);
+    border-radius: 20px;
+    max-width: 985px;
+    margin: 0 auto 36px;
+    padding: 28px 32px 24px;
+    color: var(--white);
+}
+
+.set-card-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.set-tab {
+    flex: 1;
+    min-width: 180px;
+    background: var(--primary-color);
+    border-radius: 40px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: white;
+}
+
+
+.set-card-body {
+    display: grid;
+    grid-template-columns:  1fr;
+    gap: 12px 32px;
+    text-align: center;
+}
+.set-card-body2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px 32px;
+    text-align: center;
+}
+
+.set-col li {
+    font-size: 16px;
+    padding: 3px 0;
+    padding-left: 16px;
+    list-style-type: none;
+    color: white;
+}
+
+/* Spice selector */
+.spice-label {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .85);
+    margin-bottom: 8px;
+}
+
+.spice-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.spice-dot {
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+}
+
+.spice-dot:hover {
+    transform: scale(1.2);
+}
+
+.spice-dot.active {
+    background: #f71900;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .4);
+}
+
+.spice-text {
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    margin-top: 8px;
+    min-height: 16px;
+    transition: opacity .2s;
+}
+
+/* ── Curry Rows ── */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      width: 100%;
+      justify-content: center;
+      margin: auto 0;
+      padding: 2rem 25rem;
+    }
+
+/* ── Curry Card ── */
+    .curry-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 12px 14px;
+      text-align: center;
+      width: 180px;
+      flex-shrink: 0;
+    }
+
+    .curry-card__img {
+      width: 150px;
+      height: 130px;
+      background: #e8ddd0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .curry-card__img img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+
+    .curry-card__name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #222;
+      line-height: 1.4;
+      margin-bottom: 2px;
+    }
+
+    .curry-card__name-jp {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .curry-card__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: auto;
+      padding-top: 8px;
+    }
+
+    .curry-card__price {
+      font-size: 20px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .cart-btn {
+      width: 32px; height: 32px;
+      background: #1a3a5c;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .cart-btn svg { width: 17px; height: 17px; fill: #fff; }
+
+    /* footer note */
+    .footer-note {
+      font-size: 15px;
+      color: #5bb007;
+      font-weight: 700;
+      padding: 2rem;
+      transform: translateX(45%);
+    }
+
+    /* ── Tablet (481px – 768px) ── */
+    @media (min-width: 481px) and (max-width: 768px) {
+      body { padding: 20px 16px 50px; gap: 16px; }
+
+      .banner { width: 100%; padding: 16px 20px 20px; }
+      .banner__cols { flex-wrap: wrap; gap: 12px; }
+      .banner__col { flex: 1 1 45%; }
+
+      .row { width: 100%; flex-wrap: wrap; justify-content: center; gap: 12px; }
+
+      .curry-card { width: 155px; }
+      .curry-card__img { width: 110px; height: 110px; font-size: 30px; }
+    }
+
+    /* ── Smartphone (max 480px) ── */
+    @media (max-width: 480px) {
+      body { padding: 14px 10px 40px; gap: 12px; }
+
+      .banner { width: 100%; padding: 14px 14px 16px; border-radius: 12px; }
+      .banner__cols { flex-direction: column; gap: 12px; }
+      .banner__tag { font-size: 12px; padding: 5px 10px; }
+      .banner__list { font-size: 12px; }
+      .banner__note { font-size: 12px; }
+      .spice-row { font-size: 12px; }
+      .dot { width: 12px; height: 12px; }
+
+      /* 2 cards per row */
+      .row { width: 100%; flex-wrap: wrap; justify-content: center; gap: 10px; }
+
+      .curry-card {
+        width: calc(50% - 8px);
+        padding: 12px 8px 10px;
+        border-radius: 12px;
+        flex-shrink: 1;
+      }
+
+      .curry-card__img { width: 88px; height: 88px; font-size: 26px; margin-bottom: 8px; }
+      .curry-card__name { font-size: 11px; }
+      .curry-card__name-jp { font-size: 11px; margin-bottom: 6px; }
+      .curry-card__price { font-size: 16px; }
+
+      .cart-btn { width: 26px; height: 26px; border-radius: 6px; }
+      .cart-btn svg { width: 13px; height: 13px; }
+
+      .footer-note { font-size: 13px; }
+    }

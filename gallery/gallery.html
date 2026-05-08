@@ -7,6 +7,8 @@
     <title>Newa Restaurant-Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Allison&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaisei+HarunoUmi&family=M+PLUS+Rounded+1c&display=swap"
         rel="stylesheet">
@@ -24,9 +26,10 @@
         <img class="logo" src="../images/homepage-images/logo.JPG" alt="">
         <ul id="navigation" class="nav">
             <li class="nav-list"><a href="../index.html">home</a></li>
-            <li class="nav-list"><a href="#menu">menu</a></li>
-            <li class="nav-list"><a href="#about">about</a></li>
-            <li class="nav-list"><a href="./gallery.html">gallery</a></li>
+            <li class="nav-list"><a href="/food-menu/recommend/recommend.html">menu</a></li>
+            <li class="nav-list"><a href="/index.html#about">about</a></li>
+            <li class="nav-list"><a href="/index.html#service">services</a></li>
+            <li class="nav-list"><a href="./gallery.html" style="color: #ffcd03;">gallery</a></li>
             <li class="nav-list"><a href="../reservation/reservation.html">reservation</a></li>
             <li class="nav-list"><a href="../access/access.html">access</a></li>
         </ul>
@@ -36,6 +39,75 @@
         </div>
 
     </header>
+
+    <section class="main-box">
+        <div id="title">
+            <h1>GALLERY</h1>
+            <h2>ギャラリー</h2>
+            <p>Here's the view</p>
+        </div>
+
+        <div class="message" style="font-size: 16px; padding: 0 0 40px 0;">
+            <h2>日本にいながら本場ネパールの味と温かい雰囲気を感じていただけます</h2>
+        </div>
+
+
+        <!-- Page 1 -->
+        <div id="page-1" class="gallery-grid">
+            <div class="gallery-item"><img src="/images/Gallery/image-1.png" alt="料理1" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-2.png" alt="料理2" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-3.png" alt="料理3" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-4.png" alt="料理4" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-5.png" alt="料理5" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-6.png" alt="料理6" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-7.png" alt="料理7" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-8.png" alt="料理8" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-9.png" alt="店舗1" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-10.png" alt="店舗2" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-11.png" alt="内観1" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-12.png" alt="内観2" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-13.png" alt="内観3" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-14.png" alt="店舗3" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-15.png" alt="内観4" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-16.png" alt="内観5" /></div>
+        </div>
+
+        <!-- Page 2 -->
+        <div id="page-2" class="gallery-grid hidden">
+            <div class="gallery-item"><img src="/images/Gallery/image-17.png" alt="画像1" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-18.png" alt="画像2" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-19.png" alt="画像3" /></div>
+            <div class="gallery-item"><img src="/images/Gallery/image-20.png" alt="画像4" /></div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="page-btn" onclick="changePage(currentPage - 1)">«</button>
+            <button class="page-btn active" id="btn-1" onclick="changePage(1)">1</button>
+            <button class="page-btn" id="btn-2" onclick="changePage(2)">2</button>
+            <button class="page-btn" onclick="changePage(currentPage + 1)">»</button>
+        </div>
+    </section>
+
+    <!-- sns section -->
+    <div class="contact-container">
+        <div class="contact-01">
+            <i class="fa-solid fa-phone"></i>
+            <a href="">Phone: <span>022-796-2804</span> </a>
+        </div>
+        <div class="contact-02">
+            <p>Follow Us On</p>
+            <div class="sns-icon">
+                <i class="fa-brands fa-square-facebook fa-xl"></i>
+                <i class="fa-brands fa-square-instagram fa-xl"></i>
+                <i class="fa-brands fa-square-twitter fa-xl"></i>
+            </div>
+        </div>
+        <div class="contact-03">
+            <p><span><i class="fa-solid fa-envelope"></i></span> Email:</p>
+            <a href="">newarestaurant123@gmail.com</a>
+        </div>
+    </div>
 
     <footer>
         <div class="footer logo">
@@ -60,114 +132,17 @@
                     定休日： 水曜日</p>
             </div>
         </div>
-        <!DOCTYPE html>
-        <html lang="en">
-
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Newa Restaurant/food-menu/drinks</title>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link
-                href="https://fonts.googleapis.com/css2?family=Allison&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaisei+HarunoUmi&family=M+PLUS+Rounded+1c&display=swap"
-                rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Titan+One&display=swap"
-                rel="stylesheet">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-            <link rel="stylesheet" href="/main.css">
-            <link rel="stylesheet" href="./drinks.css">
-
-            <!-- Font Awesome Free (latest) CDN -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        </head>
-
-        <body>
-            <header>
-                <img class="logo" src="../images/homepage-images/logo.JPG" alt="">
-                <ul id="navigation" class="nav">
-                    <li class="nav-list"><a href="../index.html">home</a></li>
-                    <li class="nav-list"><a href="../index.html#menu">menu</a></li>
-                    <li class="nav-list"><a href="../index.html#about">about</a></li>
-                    <li class="nav-list"><a href="../index.html#service">services</a></li>
-                    <li class="nav-list"><a href="./gallery.html">gallery</a></li>
-                    <li class="nav-list"><a href="../reservation/reservation.html">reservation</a></li>
-                    <li class="nav-list"><a href="../access/access.html">access</a></li>
-                </ul>
-                <div class="user">
-                    <i class="fa-solid fa-circle-user fa-2xl"></i>
-                    <i class="fa-solid fa-cart-arrow-down fa-2xl"></i>
-                </div>
-
-            </header>
-
-            <!-- sns section -->
-            <div class="contact-container">
-                <div class="contact-01">
-                    <i class="fa-solid fa-phone"></i>
-                    <a href="">Phone: <span>022-796-2804</span> </a>
-                </div>
-                <div class="contact-02">
-                    <p>Follow Us On</p>
-                    <div class="sns-icon">
-                        <i class="fa-brands fa-square-facebook fa-xl"></i>
-                        <i class="fa-brands fa-square-instagram fa-xl"></i>
-                        <i class="fa-brands fa-square-twitter fa-xl"></i>
-                    </div>
-                </div>
-                <div class="contact-03">
-                    <p><span><i class="fa-solid fa-envelope"></i></span> Email:</p>
-                    <a href="">newarestaurant123@gmail.com</a>
-                </div>
-            </div>
-
-
-            <footer>
-                <div class="footer logo">
-                    <img class="logo" src="../images/homepage-images/logo.JPG" alt="">
-                </div>
-                <div class="footer-info">
-                    <div id="f-box1" class="footer-info-box">
-                        <h3>ADDRESS</h3>
-                        <p>〒980-0004 <br>
-                            宮城県仙台市青葉区宮町２丁目２−２５ <br>
-                            日本、仙台</p>
-                    </div>
-                    <div id="f-box2" class="footer-info-box">
-                        <h3>BOOK A TABLE</h3>
-                        <p>お席のご予約を承っております。
-                            特別なひとときをぜひ当店でお楽しみください。</p>
-                        <a href="#">Reservation here</a>
-                    </div>
-                    <div id="f-box3" class="footer-info-box">
-                        <h3>OPENING HOUR</h3>
-                        <p>営業時間： 11:00〜22:00 <br>
-                            定休日： 水曜日</p>
-                    </div>
-                </div>
-                <div class="footer-nav">
-                    <ul>
-                        <li class="nav-list"><a href="../index.html">home</a></li>
-                        <li class="nav-list"><a href="../index.html#menu">menu</a></li>
-                        <li class="nav-list"><a href="../index.html#about">about</a></li>
-                        <li class="nav-list"><a href="../index.html#service">services</a></li>
-                        <li class="nav-list"><a href="./gallery.html">gallery</a></li>
-                        <li class="nav-list"><a href="../reservation/reservation.html">reservation</a></li>
-                        <li class="nav-list"><a href="../access/access.html">access</a></li>
-                    </ul>
-                </div>
-                <div class="copyright">
-                    <p>© 2025 NEWA Restaurant. All rights reserved.</p>
-                </div>
-            </footer>
-
-
-
-            <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-            <script src="script.js"></script>
-        </body>
-
-        </html>
+        <div class="footer-nav">
+            <ul>
+                <li class="nav-list"><a href="../index.html">home</a></li>
+                <li class="nav-list"><a href="../index.html#menu">menu</a></li>
+                <li class="nav-list"><a href="../index.html#about">about</a></li>
+                <li class="nav-list"><a href="../index.html#service">services</a></li>
+                <li class="nav-list"><a href="../gallery/gallery.html">gallery</a></li>
+                <li class="nav-list"><a href="./reservation.html">reservation</a></li>
+                <li class="nav-list"><a href="../access/access.html">access</a></li>
+            </ul>
+        </div>
         <div class="copyright">
             <p>© 2025 NEWA Restaurant. All rights reserved.</p>
         </div>
@@ -176,7 +151,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./gallery.js"></script>
 </body>
 
 </html>

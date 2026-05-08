@@ -7,12 +7,14 @@
     <title>Newa Restaurant-Reservation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Allison&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaisei+HarunoUmi&family=M+PLUS+Rounded+1c&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Titan+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="./reservation.css">
 
     <!-- Font Awesome Free (latest) CDN -->
@@ -28,7 +30,7 @@
             <li class="nav-list"><a href="../index.html#about">about</a></li>
             <li class="nav-list"><a href="../index.html#service">services</a></li>
             <li class="nav-list"><a href="../gallery/gallery.html">gallery</a></li>
-            <li class="nav-list"><a href="./reservation.html">reservation</a></li>
+            <li class="nav-list"><a href="./reservation.html" style="color: #ffcd03;">reservation</a></li>
             <li class="nav-list"><a href="../access/access.html">access</a></li>
         </ul>
         <div class="user">
@@ -37,6 +39,67 @@
         </div>
 
     </header>
+
+    <section class="main-box">
+        <div id="title">
+            <h1>RESERVATION</h1>
+            <h2>ご予約</h2>
+            <p>For Booking Your Table</p>
+        </div>
+        <div class="message" style="font-size: 16px; padding: 0 0 40px 0;">
+            <h2>ご予約はこちらから。Newaで本場ネパールの味をお楽しみください</h2>
+        </div>
+
+
+
+        <div class="form-container">
+            <form id="reservationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="" pattern="[0-9\-\+\(\)\s]+">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Reservation Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="guests">Number of Guest:</label>
+                        <input type="number" id="guests" name="guests" min="1" max="20" required placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Reservation Time:</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="note">Special Note:</label>
+                        <textarea id="note" name="note" placeholder=""></textarea>
+                    </div>
+                </div>
+
+                <div class="button-container">
+                    <button type="submit" class="book-button">Book Now</button>
+                </div>
+            </form>
+        </div>
+    </section>
 
     <!-- sns section -->
     <div class="contact-container">

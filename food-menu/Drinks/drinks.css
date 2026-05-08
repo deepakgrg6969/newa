@@ -1,0 +1,233 @@
+:root {
+    --primary-color: #87252D;
+    --secondary-color: #DE8928;
+    --background-color: #F9F3E7;
+    --title-color: #E2C6B6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Noto Serif JP", sans-serif, serif;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--background-color);
+}
+
+.main-box{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:15rem;
+}
+
+#title h1 {
+    font-family: "Titan One", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12rem;
+    color: var(--title-color);
+    /* opacity: 0.2; */
+}
+
+#title h2 {
+    font-size: 3.6rem;
+    position: absolute;
+    padding: 5rem 0 0 0;
+    text-decoration: solid;
+    /* color: #f02400; */
+}
+
+#title p {
+    font-family: "Allison", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    transform: translateY(-30px);
+    padding: 25px;
+}
+
+ /* =============================================
+           CONTENT WRAPPER
+           ============================================= */
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 24px 20px 60px;
+            width: 100%;
+            gap: 40px;
+        }
+
+        /* =============================================
+           CATEGORY SECTION
+           ============================================= */
+        .category {
+            width: 100%;
+            max-width: 920px;
+        }
+
+        .category__title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            text-align: center;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--dark);
+            letter-spacing: .06em;
+        }
+
+        /* =============================================
+           DRINK CARDS ROW
+           ============================================= */
+        .drink-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: flex-start;
+        }
+
+        /* =============================================
+           DRINK CARD
+           ============================================= */
+        .drink-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 180px;
+            padding: 14px 10px 12px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* "New" badge */
+        .drink-card .badge {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: var(--secondary);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 4px;
+            letter-spacing: .04em;
+        }
+
+        .drink-card__img {
+            width: 160px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .drink-card__img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Placeholder when no image */
+        .drink-card__img .placeholder {
+            width: 200px;
+            height: 200px;
+            background: #e8ddd0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+        }
+
+        .drink-card__name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #222;
+            line-height: 1.4;
+            margin-bottom: 2px;
+        }
+
+        .drink-card__name-jp {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .drink-card__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: auto;
+            padding-top: 6px;
+            border-top: 1px dashed #ddd;
+        }
+
+        .drink-card__price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .cart-btn {
+            width: 26px; height: 26px; min-width: 26px;
+            background: #1a3a5c;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .cart-btn svg { width: 13px; height: 13px; fill: #fff; }
+
+        .cart-btn::after {
+            content: '+';
+            position: absolute;
+            bottom: -3px; right: -3px;
+            background: #1a3a5c;
+            color: #fff;
+            font-size: 9px;
+            font-weight: 700;
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1.5px solid #fff;
+        }
+

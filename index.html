@@ -7,11 +7,13 @@
     <title>Newa Restaurant</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allison&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">     
+    <link href="https://fonts.googleapis.com/css2?family=Allison&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Allison&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaisei+HarunoUmi&family=M+PLUS+Rounded+1c&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Titan+One&display=swap&" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Titan+One&display=swap&"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./main.css">
@@ -21,10 +23,14 @@
 </head>
 
 <body>
+
+    <!-- ── HEADER ── -->
     <header>
         <img class="logo" src="./images/homepage-images/logo.JPG" alt="">
+
+        <!-- Desktop navigation (hidden on mobile via CSS) -->
         <ul id="navigation" class="nav">
-            <li class="nav-list"><a href="#">home</a></li>
+            <li class="nav-list"><a href="#" style="color: #ffcd03;">home</a></li>
             <li class="nav-list"><a href="#menu">menu</a></li>
             <li class="nav-list"><a href="#about">about</a></li>
             <li class="nav-list"><a href="#service">services</a></li>
@@ -32,13 +38,34 @@
             <li class="nav-list"><a href="./reservation/reservation.html">reservation</a></li>
             <li class="nav-list"><a href="./access/access.html">access</a></li>
         </ul>
+
         <div class="user">
             <i class="fa-solid fa-circle-user fa-2xl"></i>
             <i class="fa-solid fa-cart-arrow-down fa-2xl"></i>
         </div>
 
+        <!-- Hamburger button (shown on mobile only) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
+    <!-- Mobile navigation drawer -->
+    <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <ul>
+            <li class="nav-list"><a href="#" onclick="closeMobileNav()">home</a></li>
+            <li class="nav-list"><a href="#menu" onclick="closeMobileNav()">menu</a></li>
+            <li class="nav-list"><a href="#about" onclick="closeMobileNav()">about</a></li>
+            <li class="nav-list"><a href="#service" onclick="closeMobileNav()">services</a></li>
+            <li class="nav-list"><a href="./gallery/gallery.html" onclick="closeMobileNav()">gallery</a></li>
+            <li class="nav-list"><a href="./reservation/reservation.html" onclick="closeMobileNav()">reservation</a></li>
+            <li class="nav-list"><a href="./access/access.html" onclick="closeMobileNav()">access</a></li>
+        </ul>
+    </nav>
+
+    <!-- ── HERO ── -->
     <section class="main-container">
         <div class="title-container">
             <h1>NEWA</h1>
@@ -46,8 +73,8 @@
             <h3>(仙台で本格ネパール料理)</h3>
             <p>ネパールの豊かな味わいと彩り豊かな料理を、日本でお楽しみください。</p>
             <div id="toppage-button" class="buttons">
-                <button id="button-1">メニューを見る</button>
-                <button id="button-2">予約する</button>
+                <a class="myButton" id="buttons" href="./food-menu/recommend/recommend.html">メニューを見る</a>
+                <a class="myButton" id="buttons" href="./food-menu/recommend/recommend.html">予約する</a>
             </div>
         </div>
         <div class="image-container">
@@ -55,7 +82,7 @@
         </div>
     </section>
 
-    <!-- loop animation -->
+    <!-- ── LOOP ANIMATION ── -->
     <section class="loop">
         <div class="animation">
             <img src="./images/side menu set/RI-momo-removebg-preview.png" alt="">
@@ -75,10 +102,9 @@
             <img src="./images/side menu set/RI-Papad-removebg-preview.png" alt="">
             <img src="./images/side menu set/Ri-Panipuri-removebg-preview.png" alt="">
         </div>
-
     </section>
 
-    <!-- menu section -->
+    <!-- ── MENU ── -->
     <section id="menu" class="menu-container">
         <div id="title">
             <h1>MENU</h1>
@@ -91,11 +117,12 @@
             <img src="./images/homepage-images/poster_hookah.png" alt="" class="poster-3">
             <div class="circle"></div>
         </div>
-        <button class="menu-button">もっと 見る</button>
+        <div class="menu-button-box">
+            <a class="menu-button" id="buttons" href="./food-menu/recommend/recommend.html">メニューを見る</a>
+        </div>
     </section>
 
-    <!-- About section -->
-
+    <!-- ── ABOUT ── -->
     <section id="about" class="about-container">
         <div class="about-01">
             <img src="./images/homepage-images/mask.png" alt="" class="mask">
@@ -131,29 +158,20 @@
                             や炒め物、スパイスの効いた肉料理まで、どの一皿もネパールの味わいを感じられます。ネパール産のビール、ラム、ウイスキーも揃い、ひと口ごとに本場の味をお楽しみいただけます。</p>
                     </div>
                 </div>
-                <!-- <div class="illustrator">
-                    <img src="./images/homepage-images/boy_and_girl.png" alt="">
-                </div> -->
-
             </div>
         </div>
-
     </section>
 
-    <!-- feedback&review section -->
-
+    <!-- ── FEEDBACK ── -->
     <section class="feedback" id="review">
         <div id="title">
             <h1>FEEDBACK</h1>
             <h2>お客様の声</h2>
             <p>From Our Customer</p>
         </div>
-        <!-- <div class="review-box">
-        </div> -->
         <div class="bg">
             <div class="swiper">
                 <div class="swiper-wrapper">
-
                     <div class="swiper-slide">
                         <div class="slider-illus">
                             <img class="flat-momo" src="./images/homepage-images/long_momo.png" alt="">
@@ -216,8 +234,7 @@
         </div>
     </section>
 
-
-    <!-- services section -->
+    <!-- ── SERVICES ── -->
     <section id="service" class="service_container">
         <div id="title">
             <h1>SERVICES</h1>
@@ -259,7 +276,7 @@
                 <div class="service-text">
                     <p>Enjoy authentic curry and momos delivered hot.</p>
                 </div>
-                <div class=" best-value service-logo ">
+                <div class="best-value service-logo">
                     <img src="./images/homepage-images/best_value.png" alt="">
                 </div>
                 <button class="service-button">プランを確認</button>
@@ -270,7 +287,7 @@
                 <div class="service-text">
                     <p>Quick, delicious and affordable set meals.( Available )</p>
                 </div>
-                <div class=" plate service-logo">
+                <div class="plate service-logo">
                     <img src="./images/homepage-images/plate.png" alt="">
                 </div>
                 <button class="service-button">詳細はこちら</button>
@@ -278,7 +295,7 @@
         </div>
     </section>
 
-<!-- sns section -->
+    <!-- ── CONTACT STRIP ── -->
     <div class="contact-container">
         <div class="contact-01">
             <i class="fa-solid fa-phone"></i>
@@ -298,8 +315,7 @@
         </div>
     </div>
 
-
-    <!-- footer section -->
+    <!-- ── FOOTER ── -->
     <footer>
         <div class="footer logo">
             <img class="logo" src="./images/homepage-images/logo.JPG" alt="">
@@ -328,7 +344,7 @@
                 <li class="nav-list"><a href="#">home</a></li>
                 <li class="nav-list"><a href="#menu">menu</a></li>
                 <li class="nav-list"><a href="#about">about</a></li>
-                <li class="nav-list"><a href="#serivce">services</a></li>
+                <li class="nav-list"><a href="#service">services</a></li>
                 <li class="nav-list"><a href="../gallery/gallery.html">gallery</a></li>
                 <li class="nav-list"><a href="../reservation/reservation.html">reservation</a></li>
                 <li class="nav-list"><a href="../access/access.html">access</a></li>
@@ -339,10 +355,7 @@
         </div>
     </footer>
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>

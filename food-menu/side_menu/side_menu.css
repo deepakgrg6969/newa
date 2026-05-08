@@ -1,0 +1,209 @@
+:root {
+    --primary-color: #87252D;
+    --secondary-color: #DE8928;
+    --background-color: #F9F3E7;
+    --title-color: #E2C6B6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Noto Serif JP", sans-serif, serif;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--background-color);
+}
+
+.main-box{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:15rem;
+}
+
+#title h1 {
+    font-family: "Titan One", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12rem;
+    color: var(--title-color);
+    /* opacity: 0.2; */
+}
+
+#title h2 {
+    font-size: 3.6rem;
+    position: absolute;
+    padding: 5rem 0 0 0;
+    text-decoration: solid;
+    /* color: #f02400; */
+}
+
+#title p {
+    font-family: "Allison", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    transform: translateY(-30px);
+    padding: 25px;
+}
+
+/* =============================================
+           CONTENT WRAPPER
+           ============================================= */
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 20px 60px;
+            width: 100%;
+        }
+
+        /* =============================================
+           MENU GRID
+           ============================================= */
+        .menu-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            width: 100%;
+            max-width: 900px;
+            justify-content: center;
+        }
+
+        /* =============================================
+           MENU CARD
+           ============================================= */
+        .menu-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: calc(50% - 8px);
+            overflow: hidden;
+            min-height: 130px;
+        }
+
+        /* Full-width card (e.g. Chilly) */
+        .menu-card--wide {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .menu-card__img {
+            width: 120px;
+            min-width: 120px;
+            height: 120px;
+            background: #ffffff;
+            flex-shrink: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .menu-card__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .menu-card__body {
+            flex: 1;
+            padding: 14px 14px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .menu-card__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 8px;
+            margin-bottom: 4px;
+            gap: 8px;
+        }
+
+        .menu-card__name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #222;
+            line-height: 1.3;
+        }
+
+        .menu-card__name-jp {
+            font-size: 1.4rem;
+            color: #000000;
+            margin-top: 2px;
+        }
+
+        .menu-card__desc {
+            font-size: 1.6rem;
+            color: #000000;
+            line-height: 1.7;
+            flex: 1;
+        }
+
+        .menu-card__price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #000000;
+            text-align: right;
+            margin-top: auto;
+            padding-top: 6px;
+        }
+
+        /* Price list */
+        .price-list { display: flex; flex-direction: column; gap: 4px; margin-top: 4px; }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.6rem;
+            color: #000000;
+            border-bottom: 1px dotted #e0d8cc;
+            padding: 3px 0;
+        }
+        .price-row:last-child { border-bottom: none; }
+
+        /* Cart Button */
+        .cart-btn {
+            width: 28px; height: 28px; min-width: 28px;
+            background: #1a3a5c;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        .cart-btn svg { width: 15px; height: 15px; fill: #fff; }

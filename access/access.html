@@ -7,6 +7,8 @@
     <title>Newa Restaurant-Access</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Allison&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaisei+HarunoUmi&family=M+PLUS+Rounded+1c&display=swap"
         rel="stylesheet">
@@ -30,7 +32,7 @@
             <li class="nav-list"><a href="../index.html#service">services</a></li>
             <li class="nav-list"><a href="../gallery/gallery.html">gallery</a></li>
             <li class="nav-list"><a href="../reservation/reservation.html">reservation</a></li>
-            <li class="nav-list"><a href="./access.html">access</a></li>
+            <li class="nav-list"><a href="./access.html" style="color: #ffcd03;">access</a></li>
         </ul>
         <div class="user">
             <i class="fa-solid fa-circle-user fa-2xl"></i>
@@ -58,57 +60,45 @@
         <div class="map">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1174.0460526672973!2d140.88407717290968!3d38.270553202358094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1769150471337!5m2!1sen!2sus"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div class="contact-form">
-                <form action="" method="POST">
-                    <div>
-                        <label for="name">Name:</label><br>
-                        <input type="text" id="name" name="user_name" value="" required>
-                    </div>
-                    <br>
-                    <div>
-                        <label for="mail">Email:</label><br>
-                        <input type="text" id="mail" name="user_email" required>
-                    </div>
-                    <br>
-                    <div>
-                        <label for="phone">Phone Number</label><br>
-                        <input type="tel" id="phone" name="user_phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
-                            placeholder="">
-                    </div>
-                    <br>
-                    <div>
-                        <label for="message">Message:</label><br>
-                        <textarea name="user_message" id="message" rows="5"></textarea>
-                    </div>
-                    <br>
-                    <div>
-                        <button type="submit">Send Message</button>
-                    </div>
+        </div>
+        <!-- Form Section -->
+        <div class="form-section">
+            <h1 class="form-title">SEND US MESSAGE</h1>
 
-                </form>
-            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="number">Number</label>
+                    <input type="tel" id="number" name="number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Send
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </form>
         </div>
     </section>
 
-    <!-- Restaurant branches section -->
-
-    <section class="branch">
-        <h1>WE HAVE OTHER BRANCHES OF OUR RESTAURANT</h1>
-        <div class="branch-container">
-            <div class="branch-1">
-                <img src="" alt="">
-                <p></p>
-                <button type="">もっと みる</button>
-            </div>
-            <div class="branch-2">
-                <img src="" alt="">
-                <p></p>
-                <button type="">もっと みる</button>
-            </div>
-        </div>
-    </section>
 
     <!-- sns section -->
     <div class="contact-container">

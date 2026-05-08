@@ -68,24 +68,27 @@ body {
     padding: 2rem 0;
 }
 
-button {
-    width: 15rem;
-    height: 4.5rem;
+#buttons {
     color: white;
-    font-size: 1.6rem;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
     border-radius: 20px;
 }
 
-.buttons {
-    display: flex;
-    gap: 25px;
+.myButton{
+    background-color: var(--primary-color);
 }
-
-#button-1,
-#button-2 {
-    background: var(--primary-color);
+.myButton:hover{
+    background: #ce0000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 8, 0, 0.4);
 }
-
 
 
 /* .button-2 {
@@ -106,6 +109,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 5rem;
 }
 
 @keyframes loop-animation {
@@ -141,7 +145,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem;
+    padding: 10rem 5rem 0 5rem;
 }
 
 #title {
@@ -180,8 +184,8 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10rem 5rem;
-    gap: 3rem;
+    padding: 10rem 5rem 0 5rem;
+    gap: 5rem;
     /* background: #5b3232;
     border-radius: 50%; */
     position: relative;
@@ -208,17 +212,26 @@ button {
     width: 51rem;
     height: 77rem;
 }
-
-.menu-button {
-    transform: translateY(-60px);
-    background: var(--secondary-color);
+.menu-button-box{
+    transform: translateY(20px);
 }
+.menu-button {
+    background-color: var(--secondary-color);
+}
+.menu-button:hover{
+    background: #ff8c00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+
+
 
 /* About section */
 .about-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 10rem;
 }
 
 .mask {
@@ -292,7 +305,7 @@ button {
     height: 600px;
     width: 998px;
     /* margin: 0 22.6rem; */
-    background: url(/images/homepage-images/restaurant-inner.png) center center/cover no-repeat;
+    background: url(./images/homepage-images/restaurant-inner.png) center center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -346,10 +359,10 @@ button {
 /* Feedback section */
 
 .feedback {
-    margin: 9rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 10rem;
 }
 
 .rating {
@@ -420,7 +433,7 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 10rem;
+    gap: 15rem;
     align-items: center;
 }
 
@@ -441,6 +454,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 10rem;
 }
 
 .boyandgirl {

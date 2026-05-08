@@ -7,6 +7,8 @@
     <title>Newa Restaurant/food-menu/drinks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Allison&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaisei+HarunoUmi&family=M+PLUS+Rounded+1c&display=swap"
         rel="stylesheet">
@@ -21,22 +23,601 @@
 
 <body>
     <header>
-        <img class="logo" src="../images/homepage-images/logo.JPG" alt="">
+        <img class="logo" src="/images/homepage-images/logo.JPG" alt="">
         <ul id="navigation" class="nav">
-            <li class="nav-list"><a href="../index.html">home</a></li>
-            <li class="nav-list"><a href="#menu">menu</a></li>
-            <li class="nav-list"><a href="#about">about</a></li>
-            <li class="nav-list"><a href="#serivce">services</a></li>
-            <li class="nav-list"><a href="../gallery/gallery.html">gallery</a></li>
-            <li class="nav-list"><a href="./reservation/reservation.html">reservation</a></li>
-            <li class="nav-list"><a href="../access/access.html">access</a></li>
+            <li class="nav-list"><a href="/index.html">home</a></li>
+            <li class="nav-list"><a href="/index.html#menu">menu</a></li>
+            <li class="nav-list"><a href="/index.html#about">about</a></li>
+            <li class="nav-list"><a href="/index.html#service">services</a></li>
+            <li class="nav-list"><a href="/gallery/gallery.html">gallery</a></li>
+            <li class="nav-list"><a href="/reservation/reservation.html">reservation</a></li>
+            <li class="nav-list"><a href="/access/access.html">access</a></li>
         </ul>
         <div class="user">
             <i class="fa-solid fa-circle-user fa-2xl"></i>
             <i class="fa-solid fa-cart-arrow-down fa-2xl"></i>
         </div>
-
     </header>
+
+        <div class="submenu">
+        <a href="/food-menu/recommend/recommend.html" onclick="showSection('recommend', this)">Recommend</a>
+        <a href="/food-menu/newa_set_menu/newa_set_menu.html" onclick="showSection('newa-set', this)">Newa Set Menu</a>
+        <a href="/food-menu/lunch&dinner_set/lunch&dinner_set.html" onclick="showSection('lunch', this)">Lunch</a>
+        <a href="/food-menu/single_item_curry_set/single_item_curry_set.html" onclick="showSection('curry', this)">Curry
+            Set</a>
+        <a href="/food-menu/side_menu/side_menu.html" onclick="showSection('slide', this)">Side Menu</a>
+        <a href="/food-menu/salad/salad.html" onclick="showSection('salad', this)">Salad</a>
+        <a href="/food-menu/Drinks/drinks.html" onclick="showSection('drinks', this)"  style="color:#eeff01;">Drinks</a>
+    </div>
+
+
+
+    <section class="main-box">
+        <div id="title">
+            <h1>DRINKS</h1>
+            <h2>飲み物</h2>
+        </div>
+
+        <div class="message" style="font-size: 16px; padding: 0 0 40px 0;">
+            <h2>ネパールブランドのソフトドリンク・アルコールをはじめ、日本や西洋のドリンクも幅広く取り揃えています</h2>
+        </div>
+    </section>
+
+      <!-- ── Drink Categories ── -->
+    <div class="content-wrapper">
+
+        <!-- ===== BEER ===== -->
+        <div class="category">
+            <div class="category__title">BEER（ビール）</div>
+            <div class="drink-row">
+
+                <div class="drink-card">
+                    <span class="badge">New</span>
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-Nepal_Ice.jpg" alt="">
+                    </div></div>
+                    <div class="drink-card__name">NEPAL ICE</div>
+                    <div class="drink-card__name-jp">ネパールアイス</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">550円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <span class="badge">New</span>
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-arna_premium_beer.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">ARNA PREMIUM BEER</div>
+                    <div class="drink-card__name-jp">アルナプレミアムビール</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">550円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <span class="badge">New</span>
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-Arna_Beer.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">ARNA 8.8</div>
+                    <div class="drink-card__name-jp">アルナエイトビール</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">550円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-Kingfisher.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">KINGFISHER BEER</div>
+                    <div class="drink-card__name-jp">キングフィッシャービール</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">680円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-corona_beer.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">CORONA</div>
+                    <div class="drink-card__name-jp">コロナ</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">590円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-Kirin_nama_beer.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">KIRIN BEER</div>
+                    <div class="drink-card__name-jp">生ビール</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">450円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-Carlsberg.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">CARLSBERG</div>
+                    <div class="drink-card__name-jp">カールスベーグ</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">550円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== WHISKEY ===== -->
+        <div class="category">
+            <div class="category__title">WHISKEY（ウイスキー）</div>
+            <div class="drink-row">
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-Old_Durbar.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">OLD DURBAR WHISKY</div>
+                    <div class="drink-card__name-jp">オールドダーバー</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">450円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/Ri-Old_durbar_chimney.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">OLD DURBAR BLACK CHIMNEY</div>
+                    <div class="drink-card__name-jp">ブラックチムニー</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">480円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-white horse whisky.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">WHITE HORSE</div>
+                    <div class="drink-card__name-jp">ホワイトホース</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">500円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== RUM ===== -->
+        <div class="category">
+            <div class="category__title">RUM（ラム酒）</div>
+            <div class="drink-row">
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-khukri_xxx rum.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">KHUKRI XXX RUM</div>
+                    <div class="drink-card__name-jp">ククリラム</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">450円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-khukri_spice rum.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">KHUKURI SPICE RUM</div>
+                    <div class="drink-card__name-jp">クトリックスパイスラム</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">480円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== VODKA ===== -->
+        <div class="category">
+            <div class="category__title">VODKA（ウォッカ）</div>
+            <div class="drink-row">
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-8848_vodka.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">8848 VODKA</div>
+                    <div class="drink-card__name-jp">ロシア・ウォッカ</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">450円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== WINE ===== -->
+        <div class="category">
+            <div class="category__title">WINE（ワイン）</div>
+            <div class="drink-row">
+
+                <div class="drink-card">
+                    <span class="badge">New</span>
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-Rakshi-1.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">RAKSHI</div>
+                    <div class="drink-card__name-jp">ヒエ焼酎 ロキシー 28%</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">450円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <span class="badge">New</span>
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-rakshi-2.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">RAKSHI</div>
+                    <div class="drink-card__name-jp">ヒエ焼酎 ロキシー 38%</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">450円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <span class="badge">New</span>
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-somras wine.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">SOMRAS</div>
+                    <div class="drink-card__name-jp">そば焼酎 そむらす</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">450円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-red wine.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">RED WINE</div>
+                    <div class="drink-card__name-jp">赤ワイン</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">480円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-White wine.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">WHITE WINE</div>
+                    <div class="drink-card__name-jp">白ワイン</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">480円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-一ノ蔵.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">ichinokura rice wine</div>
+                    <div class="drink-card__name-jp">一ノ蔵 (日本酒)</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">480円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== COCKTAIL ===== -->
+        <div class="category">
+            <div class="category__title">COCKTAIL（カクテル）</div>
+            <div class="drink-row">
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-peach&orange.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">PEACH ORANGE</div>
+                    <div class="drink-card__name-jp">ピーチオレンジ</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">480円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-peach_and_oolong tea.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">PEACH OOLONG</div>
+                    <div class="drink-card__name-jp">ピーチウーロン</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">480円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-cassis_and_orange.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">CASSIS ORANGE</div>
+                    <div class="drink-card__name-jp">カシスオレンジ</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">480円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-cassis_and_oolong_tea.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name"> CASSIS OOLONG TEA</div>
+                    <div class="drink-card__name-jp">カシスウーロン茶</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">480円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== SOUR ===== -->
+        <div class="category">
+            <div class="category__title">SOUR（サワー）</div>
+            <div class="drink-row">
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-lemon_sour.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">LEMON SOUR</div>
+                    <div class="drink-card__name-jp">レモンサワー</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">460円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-lime_sour.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">LIME SOUR</div>
+                    <div class="drink-card__name-jp">ライムサワー</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">460円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/Ri-peach_sour.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">PEACH SOUR</div>
+                    <div class="drink-card__name-jp">ピーチサワー</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">460円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-grape_sour.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">GRAPE SOUR</div>
+                    <div class="drink-card__name-jp">グレープサワー</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">460円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-grape_fruit_sour.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">GRAPE-FRUIT SOUR</div>
+                    <div class="drink-card__name-jp">グレープフルーツサワー</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">460円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== SOFT DRINK ===== -->
+        <div class="category">
+            <div class="category__title">SOFT DRINK（ソフトドリンク）</div>
+            <div class="drink-row">
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-orange_juice.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">ORANGE JUICE</div>
+                    <div class="drink-card__name-jp">オレンジジュース</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">250円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-grape_juice.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">GRAPE JUICE</div>
+                    <div class="drink-card__name-jp">グレープジュース</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">250円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-olong_tea.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">OOLONG TEA</div>
+                    <div class="drink-card__name-jp">ウーロン茶</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">250円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-coco-cola.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">COCA COLA</div>
+                    <div class="drink-card__name-jp">コカ・コーラ</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">250円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-ginger_ale.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">GINGER ALE</div>
+                    <div class="drink-card__name-jp">ジンジャーエール</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">250円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-banana_lassi.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">LASSI</div>
+                    <div class="drink-card__name-jp">ラッシー</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">350円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-mango_lassi.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">MANGO LASSI</div>
+                    <div class="drink-card__name-jp">マンゴーラッシー</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">380円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-Strawberry milk.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">STRAWBERRY MILK</div>
+                    <div class="drink-card__name-jp">ストロベリーミルク</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">380円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+                <div class="drink-card">
+                    <div class="drink-card__img"><div class="placeholder">
+                        <img src="/images/Drinks/RI-Chai_masala.png" alt="">
+                    </div></div>
+                    <div class="drink-card__name">MASALA CHAI</div>
+                    <div class="drink-card__name-jp">マサラチャイ</div>
+                    <div class="drink-card__footer">
+                        <span class="drink-card__price">350円</span>
+                        <button class="cart-btn"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.21 4H2V2H0v2h2l3.6 7.59L4.25 14A2 2 0 0 0 6 17h14v-2H6.42a.25.25 0 0 1-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 23.46 4H5.21z"/></svg></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div><!-- /content-wrapper -->
+
 
     <!-- sns section -->
     <div class="contact-container">
@@ -61,7 +642,7 @@
 
     <footer>
         <div class="footer logo">
-            <img class="logo" src="../images/homepage-images/logo.JPG" alt="">
+            <img class="logo" src="/images/homepage-images/logo.JPG" alt="">
         </div>
         <div class="footer-info">
             <div id="f-box1" class="footer-info-box">

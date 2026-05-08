@@ -1,0 +1,225 @@
+:root {
+    --primary-color: #87252D;
+    --secondary-color: #DE8928;
+    --background-color: #F9F3E7;
+    --title-color: #E2C6B6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Noto Serif JP", sans-serif, serif;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--background-color);
+}
+
+.main-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12rem;
+}
+
+#title h1 {
+    font-family: "Titan One", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12rem;
+    color: var(--title-color);
+    /* opacity: 0.2; */
+}
+
+#title h2 {
+    font-size: 3.6rem;
+    position: absolute;
+    padding: 5rem 0 0 0;
+    text-decoration: solid;
+    /* color: #f02400; */
+}
+
+#title p {
+    font-family: "Allison", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    transform: translateY(-30px);
+    padding: 25px;
+}
+
+
+.form-container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #000;
+    font-weight: 400;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea {
+    padding: 12px 15px;
+    border: 1px solid #d1d1d1;
+    background: #f5f5f5;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', serif;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #FFA500;
+    background: white;
+}
+
+input[type="date"],
+input[type="time"] {
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 140px;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.book-button {
+    background: #FFA500;
+    color: white;
+    border: none;
+    padding: 14px 50px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+}
+
+.book-button:hover {
+    background: #ff8c00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+}
+
+.book-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .form-container {
+        padding: 30px 20px;
+    }
+
+    .book-button {
+        padding: 12px 40px;
+        font-size: 16px;
+    }
+}
+
+/* Success Message */
+.success-message {
+    display: none;
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success-message.show {
+    display: block;
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
