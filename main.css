@@ -47,8 +47,7 @@ header {
 }
 
 .logo {
-  height: 9rem;
-  width: 10.5rem;
+  max-width: 8rem;
   object-fit: cover;
 }
 
@@ -118,10 +117,12 @@ header {
 .hamburger.open span:nth-child(1) {
   transform: translateY(0.9rem) rotate(45deg);
 }
+
 .hamburger.open span:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
+
 .hamburger.open span:nth-child(3) {
   transform: translateY(-0.9rem) rotate(-45deg);
 }
@@ -132,7 +133,8 @@ header {
 .mobile-nav {
   display: none;
   position: fixed;
-  top: 10rem; /* header height */
+  top: 10rem;
+  /* header height */
   left: 0;
   right: 0;
   background-color: #111;
@@ -301,7 +303,7 @@ footer .copyright {
   color: #ccc;
   text-decoration: none;
   font-size: 16px;
-  padding: 14px 50px;
+  padding: 10px 20px;
   display: block;
   transition: color 0.2s, background 0.2s;
   white-space: nowrap;
@@ -320,9 +322,21 @@ footer .copyright {
 /* ========================
    RESPONSIVE — Tablet (≤1024px)
 ======================== */
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
   header {
     padding: 0 4rem;
+  }
+
+  .logo {
+    min-width: 50px;
+  }
+
+  .loop img {
+    width: 15rem;
+  }
+
+  .main-box #title h1{
+    font-size: 9rem;
   }
 
   .nav {
@@ -332,7 +346,99 @@ footer .copyright {
   .nav-list a {
     font-size: 1.5rem;
   }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu-poster .poster-2 {
+    width: 50rem;
+    height: 70rem;
+  }
+
+  .menu-poster .poster-1,
+  .poster-3 {
+    width: 40rem;
+    height: 56rem;
+  }
+
+  .circle {
+    width: 900px;
+    height: 900px;
+  }
+
+  .service_item p {
+    font-size: 1.6rem;
+  }
+
 }
+
+/* ========================
+   RESPONSIVE — Mobile (≤1024px)
+======================== */
+@media (max-width: 1024px) {
+  .about-02 {
+    gap: 0px;
+  }
+
+  .about-02 img {
+    width: 530px;
+    height: 370px;
+  }
+
+  .about-03 {
+    width: 905px;
+    height: 500px;
+  }
+
+  .about-03 p {
+    font-size: 1.5rem;
+  }
+
+  .story,
+  .philosophy {
+    width: 36rem;
+  }
+
+  .story p,
+  .philosophy p {
+    font-size: 1.5rem;
+  }
+
+  .story h2,
+  .philosophy h2 {
+    font-size: 2.1rem;
+  }
+
+  .comments {
+    font-size: 1.5rem;
+  }
+
+  .rating i {
+    font-size: 2.5rem;
+  }
+
+  .slider-illus {
+    gap: 10rem;
+  }
+
+  .service_item p {
+    font-size: 1.5rem;
+  }
+
+}
+
+
 
 /* ========================
    RESPONSIVE — Mobile (≤768px)
@@ -342,9 +448,32 @@ footer .copyright {
     padding: 0 2rem;
     height: 9rem;
   }
+    .main-box #title h1{
+    font-size: 8rem;
+    padding-top: 2.5rem;
+    text-align: center;
+  }
+
+
+  #title h1 {
+    font-size: 10rem;
+  }
+
+  #title h2 {
+    font-size: 3rem;
+  }
+
+  #title p {
+    font-size: 4rem;
+  }
+
+  .flat-momo,
+  .round-momo {
+    width: 10rem;
+  }
 
   /* Hide desktop nav */
-  header > ul.nav {
+  header>ul.nav {
     display: none;
   }
 
@@ -366,6 +495,70 @@ footer .copyright {
   .user i {
     font-size: 2rem !important;
   }
+
+  .loop {
+    height: 15rem;
+  }
+
+  .loop img {
+    width: 11rem;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .menu-poster .poster-2 {
+    width: 40rem;
+    height: 57rem;
+  }
+
+  .menu-poster .poster-1,
+  .poster-3 {
+    width: 35rem;
+    height: 46rem;
+  }
+
+  .circle {
+    width: 800px;
+    height: 800px;
+  }
+
+  .mask {
+    width: 14rem;
+    height: 17rem;
+    margin-top: 50px;
+  }
+
+  .window {
+    width: 14rem;
+    height: 18rem;
+    margin-top: -50px;
+  }
+
+  .about-01{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 0rem;
+  }
+
+  .about-02 {
+    display: flex;
+    flex-direction: column;
+    max-width: 730px;
+    height: auto;
+    text-align: center;
+  }
+
+  .about-03 {
+    max-width: 730px;
+    height: 600px;
+  }
+
 
   /* ── Contact strip ── */
   .contact-container {
@@ -393,6 +586,10 @@ footer .copyright {
     justify-content: center;
     gap: 1.2rem;
   }
+
+  .sub-menu a{
+    font-size: 15px;
+  }
 }
 
 /* ========================
@@ -404,9 +601,10 @@ footer .copyright {
   }
 
   .logo {
-    height: 7rem;
+    height: 5rem;
     width: 8.5rem;
   }
+
 
   .contact-container {
     font-size: 1.3rem;
@@ -416,3 +614,5 @@ footer .copyright {
     font-size: 1.3rem;
   }
 }
+
+

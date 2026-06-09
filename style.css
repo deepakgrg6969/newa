@@ -82,6 +82,7 @@ body {
 }
 
 .myButton{
+    width: 200px;
     background-color: var(--primary-color);
 }
 .myButton:hover{
@@ -180,12 +181,17 @@ body {
     padding: 25px;
 }
 
+/* for the rotate slider */
+.rotate-slide-img {
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
 .menu-poster {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10rem 5rem 0 5rem;
-    gap: 5rem;
+    gap: 1rem;
     /* background: #5b3232;
     border-radius: 50%; */
     position: relative;
@@ -348,7 +354,7 @@ body {
 }
 
 .about-wrapper {
-    width: 120rem;
+    width: 100%;
     height: fit-content;
     margin: 0 auto;
     display: flex;
@@ -458,9 +464,13 @@ body {
 }
 
 .boyandgirl {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
-    height: 20rem;
+    height: 30rem;
     overflow: hidden;
+    gap: 2rem;
 }
 
 .boyandgirl img {
@@ -477,22 +487,22 @@ body {
 
 @keyframes moveFromLeft {
     from {
-        transform: translateX(-300%);
+        transform: translateX(-1000%);
     }
 
     to {
-        transform: translateX(590%);
+        transform: translateX(0%);
     }
 
 }
 
 @keyframes moveFromRight {
     from {
-        transform: translateX(1300%);
+        transform: translateX(1000%);
     }
 
     to {
-        transform: translateX(610%);
+        transform: translateX(0%);
     }
 
 }
@@ -584,10 +594,11 @@ body {
     height: 45px;
     background-color: var(--primary-color);
     padding: 10px;
+    color: white;
 }
 
 .service_item p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 500;
     text-align: center;
 }

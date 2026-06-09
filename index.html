@@ -31,7 +31,7 @@
         <!-- Desktop navigation (hidden on mobile via CSS) -->
         <ul id="navigation" class="nav">
             <li class="nav-list"><a href="#" style="color: #ffcd03;">home</a></li>
-            <li class="nav-list"><a href="#menu">menu</a></li>
+            <li class="nav-list"><a href="./food-menu/recommend/recommend.html">menu</a></li>
             <li class="nav-list"><a href="#about">about</a></li>
             <li class="nav-list"><a href="#service">services</a></li>
             <li class="nav-list"><a href="./gallery/gallery.html">gallery</a></li>
@@ -60,7 +60,8 @@
             <li class="nav-list"><a href="#about" onclick="closeMobileNav()">about</a></li>
             <li class="nav-list"><a href="#service" onclick="closeMobileNav()">services</a></li>
             <li class="nav-list"><a href="./gallery/gallery.html" onclick="closeMobileNav()">gallery</a></li>
-            <li class="nav-list"><a href="./reservation/reservation.html" onclick="closeMobileNav()">reservation</a></li>
+            <li class="nav-list"><a href="./reservation/reservation.html" onclick="closeMobileNav()">reservation</a>
+            </li>
             <li class="nav-list"><a href="./access/access.html" onclick="closeMobileNav()">access</a></li>
         </ul>
     </nav>
@@ -111,10 +112,10 @@
             <h2>メニュー</h2>
             <p>Special</p>
         </div>
-        <div class="menu-poster">
-            <img src="./images/homepage-images/poster_drinks.png" alt="" class="poster-1">
-            <img src="./images/homepage-images/poster_food.png" alt="" class="poster-2">
-            <img src="./images/homepage-images/poster_hookah.png" alt="" class="poster-3">
+        <div class="menu-poster rotate-slide-container">
+            <img src="./images/homepage-images/poster_drinks.png" alt="left image" class="poster-1 rotate-slide-img ">
+            <img src="./images/homepage-images/poster_food.png" alt="center image" class="poster-2 rotate-slide-img active">
+            <img src="./images/homepage-images/poster_hookah.png" alt="right image" class="poster-3 rotate-slide-img">
             <div class="circle"></div>
         </div>
         <div class="menu-button-box">
@@ -184,12 +185,18 @@
                             </div>
                             <img class="round-momo" src="./images/homepage-images/round_momo.png" alt="">
                         </div>
-                        <div class="comments">'昼飲みでふらっと。
-                            近くにある他のインド料理屋の中でダントツで1番。愛想もよくて居心地良い。
-                            辛いの好きでチリペッパーかけてたら唐辛子切って持ってきてくれた！
-                            他ではしてもらった事ない！
-                            コスパ良いし、また絶対行く！ </div>
-                        <div class="user">User-name</div>
+                        <div class="comments">[Dinner Curry Set]
+                            I had decided to eat it today!
+                            Mutton Masala (Level 2 spiciness wasn't spicy enough for me, so I told them and they kindly
+                            added extra chili sauce – they were amazing!) & Naan (It was slightly layered like pastry,
+                            crispy, slightly sweet, and delicious)
+                            And the Buffalo Chicken 🍗
+                            The bone-in chicken (wings) was well-seasoned and paired perfectly with the draft beer 🍻👍.
+                            The naan was so luxuriously large that it didn't quite balance with the curry, so next time
+                            I think I'll order two kinds of curry ☺️🎶
+                            Thank you for the delicious meal ☺️
+                        </div>
+                        <div class="user">26 tiara</div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-illus">
@@ -203,8 +210,12 @@
                             </div>
                             <img class="round-momo" src="./images/homepage-images/round_momo.png" alt="">
                         </div>
-                        <div class="comments">Comment Comment Comment Comment Comment Comment Comment</div>
-                        <div class="user">User-name</div>
+                        <div class="comments">
+                            一仕事終えてあまり時間はない中で向かったのは近所のインネパ。時間がないときってその辺にあるインネパは案外重宝したりする。近所でカレーを食べられるところってインネパしかないけど。
+                            以前同じ場所にこれまた同じインネパのPahunaがあったところで去年の10月にオープンしていたが穀町から移転してきた。同じインネパだから店名がただ単に変わったと思われても致し方なしだが。
+                            Pahunaには一度入店したことがあるし(写真はあるが印象無いので記録なし)近所なのでよく見かけたがNEWAになってから入店したのは初めて。そのためなのか内装も外装もほぼ変化なし...
+                        </div>
+                        <div class="user">joy96708</div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-illus">
@@ -218,8 +229,15 @@
                             </div>
                             <img class="round-momo" src="./images/homepage-images/round_momo.png" alt="">
                         </div>
-                        <div class="comments">Comment Comment Comment Comment Comment Comment Comment</div>
-                        <div class="user">User-name</div>
+                        <div class="comments">宮町に先日（2024.10.9）オープンしたインド・ネパール料理店です。
+                            以前は同じくインド・ネパール料理の「Pahuna （パウナ）」だった店舗です。
+                            食べたのはマトンカレーセット（税込850円）。
+                            これはカレーにサラダとドリンクが付いたものです。
+                            カレーはマトンを、ドリンクはラッシーを選びました。
+                            カレーは辛さとライスor ナンが選べて、辛さは4段階の上から2番目にしてライスにしました。
+                            出てきたのは陶器のカレー皿に盛られたご飯にカレーがかけてあるもの。
+                            これはいいね。</div>
+                        <div class="user">てっぷさん</div>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -358,4 +376,5 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
