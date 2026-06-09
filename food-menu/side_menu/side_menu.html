@@ -37,7 +37,28 @@
             <i class="fa-solid fa-circle-user fa-2xl"></i>
             <i class="fa-solid fa-cart-arrow-down fa-2xl"></i>
         </div>
+
+        <!-- Hamburger button (shown on mobile only) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
+
+    <!-- Mobile navigation drawer -->
+    <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <ul>
+            <li class="nav-list"><a href="#" onclick="closeMobileNav()">home</a></li>
+            <li class="nav-list"><a href="#menu" onclick="closeMobileNav()">menu</a></li>
+            <li class="nav-list"><a href="#about" onclick="closeMobileNav()">about</a></li>
+            <li class="nav-list"><a href="#service" onclick="closeMobileNav()">services</a></li>
+            <li class="nav-list"><a href="./gallery/gallery.html" onclick="closeMobileNav()">gallery</a></li>
+            <li class="nav-list"><a href="./reservation/reservation.html" onclick="closeMobileNav()">reservation</a>
+            </li>
+            <li class="nav-list"><a href="./access/access.html" onclick="closeMobileNav()">access</a></li>
+        </ul>
+    </nav>
 
 
     <div class="submenu">

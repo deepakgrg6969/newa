@@ -75,30 +75,38 @@ body {
     justify-content: center;
     align-items: center;
 }
-.access{
-}
+
+
 .location-info{
     text-align: center;
     font-family: "Noto Serif JP";
     font-size:16px;
     padding-bottom: 2rem;
 }
-
+.access {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .map{
-    position:relative;
+    width: 70%;
+    /* position:relative; */
 }
 /* Form Section */
 .form-section {
-    position: absolute;
-    width:550px;
-    max-height:700px;
+    /* position: absolute; */
+    /* width: 30%; */
+    min-width: 300px;
+    max-width: 500px;
+    height: auto;
     flex: 0 0 500px;
     background-color: #f8f8f8;
-    padding: 60px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center:
+    align-items: center;
+    border-radius: 10px;
 }
 
 .form-title {
@@ -112,7 +120,7 @@ body {
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 5px;
 }
 
 .form-group {
@@ -144,10 +152,10 @@ body {
     background-color: #ddd;
 }
 
-.form-group textarea {
+/* .form-group textarea {
     resize: vertical;
-    min-height: 120px;
-}
+    min-height: 100px;
+} */
 
 .submit-btn {
     background-color: #FFA500;
@@ -214,4 +222,20 @@ body {
     .submit-btn {
         width: 100%;
     }
+    .access {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.map{
+    width: 100%;
+    height: auto;
+    /* position:relative; */
+}
+/* Form Section */
+.form-section {
+    /* position: absolute; */
+    width: 50%;
+}
 }
